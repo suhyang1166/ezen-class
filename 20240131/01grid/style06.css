@@ -1,0 +1,36 @@
+.parent {
+  background: khaki;
+  border: 5px solid #000;
+  display: grid;
+  grid-template-areas: ". . . item item" ". . . item item";
+}
+.parent div {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #000;
+}
+.item {
+  background: crimson;
+  grid-area: item;
+}
+
+/* order값주기 */
+/* .parent div:nth-child(1) {
+  order: 6;
+}
+.parent div:nth-child(2) {
+  order: 5;
+}
+.parent div:nth-child(3) {
+  order: 4;
+}
+.parent div:nth-child(4) {
+  order: 3;
+}
+.parent div:nth-child(5) {
+  order: 2;
+}
+.parent div:nth-child(6) {
+  order: 1;
+} */

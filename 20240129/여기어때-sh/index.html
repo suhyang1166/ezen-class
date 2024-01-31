@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--파비콘-->
+    <link rel="icon" href="./img/logo_1.png" />
+    <!--custom css-->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!--fontawesomw js-->
+    <script
+      defer
+      src="https://kit.fontawesome.com/7b09c8acb9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--custom js-->
+    <script defer src="./script.js"></script>
+    <title>
+      여기어때 | 해외여행, 호텔, 리조트, 캠핑, 펜션,모텔, 풀빌라 예약
+    </title>
+  </head>
+  <body>
+    <main>
+      <!--header-->
+      <header id="header">
+        <div>
+          <span><img width="100" src="./img/logo.png" alt="logo" /></span>
+        </div>
+        <div>
+          <span>이벤트</span>
+          <span>고객센터</span>
+          <div class="main-icons">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <div>
+              <span><i class="fa-solid fa-user"></i></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="section">
+        <form id="slide" action="https://localhost:3000" method="post">
+          <h1>국내부터 해외까지<br />여행할때 여기어때</h1>
+          <div class="main-box">
+            <div class="main-title">
+              <h3>국내 숙소</h3>
+              <h3>해외 숙소</h3>
+            </div>
+            <div class="main-schedule">
+              <form action="#">
+                <div id="main-searchs">
+                  <span><i class="fa-solid fa-magnifying-glass"></i> </span>
+                  <input
+                    type="search"
+                    class="main-search"
+                    id="search"
+                    placeholder="여행지나 숙소를 검색해보세요"
+                  />
+                </div>
+                <input
+                  type="date"
+                  class="main-month"
+                  placeholder="01.28 일 - 01.29 월 (1박)"
+                />
+                <div id="main-persons">
+                  <span><i class="fa-solid fa-user"></i></span>
+                  <select class="main-person" name="person" id="person">
+                    <option value="#">인원 2</option>
+                    <option value="#">인원 3</option>
+                    <option value="#">인원 4</option>
+                    <option value="#">인원 5</option>
+                    <option value="#">인원 6</option>
+                  </select>
+                </div>
+                <input type="submit" class="main-btn" value="검색" />
+              </form>
+            </div>
+          </div>
+        </form>
+      </section>
+      <article>
+        <div class="event-more">
+          <h3>이벤트</h3>
+          <h3>더보기</h3>
+        </div>
+        <div class="event-img"></div>
+      </article>
+      <footer></footer>
+    </main>
+  </body>
+</html>

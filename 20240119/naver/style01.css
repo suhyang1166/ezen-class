@@ -1,0 +1,101 @@
+@import url(./reset.css);
+
+#wrap {
+  border: 1px solid #f00;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+#icons {
+  /* border: 1px solid #f00; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 36px;
+}
+#icons_left {
+  display: flex;
+  margin: 10px;
+  color: #000;
+  gap: 20px;
+}
+#icons_right {
+  display: flex;
+  margin: 10px;
+  gap: 20px;
+}
+#search {
+  /* border: 1px solid #f00; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+#searchbar {
+  display: flex;
+  width: 60%;
+  height: 60px;
+  padding-left: 80px;
+  border: 1px solid #03c75a;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.fa-n {
+  position: absolute;
+  left: 260px;
+  top: 10%;
+  transform: translateY(-80%);
+  color: #03c75a;
+  font-size: 30px;
+}
+.fa-keyboard {
+  position: absolute;
+  right: 340px;
+  top: 10%;
+  transform: translateY(-80%);
+  color: #c5c5c7;
+  font-size: 30px;
+}
+.fa-caret-down {
+  position: absolute;
+  right: 310px;
+  top: 120px;
+  color: #77777a;
+  font-size: 18px;
+}
+.fa-magnifying-glass {
+  position: absolute;
+  right: 260px;
+  top: 115px;
+  color: #03c75a;
+  font-size: 30px;
+}
+.nav_im {
+  position: absolute;
+  right: 180px;
+  top: 100px;
+  display: flex;
+  width: 80px;
+  height: 60px;
+}
+#main_content {
+  display: flex;
+  width: 60%;
+  height: 80px;
+  padding-left: 100px;
+}
+section {
+  margin: 10px;
+  padding: 10px;
+}
+#star {
+  /* border: 1px solid #f00; */
+  display: flex;
+  margin: 30px;
+  width: 700px;
+  height: 100px;
+  background: url(./img/광고1.jpg) center/cover no-repeat;
+  border: 1px solid #77777a;
+  border-radius: 10px;
+}

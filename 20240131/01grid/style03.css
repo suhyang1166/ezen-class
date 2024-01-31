@@ -1,0 +1,29 @@
+@import url(./reset.css);
+
+.parent {
+  border: 5px solid #000;
+  background: khaki;
+  height: 300px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+.parent div {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #000;
+}
+.items1 {
+  background: crimson;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+.items2 {
+  background: pink;
+  grid-row: 1 / span 2;
+}
+.items5 {
+  background: skyblue;
+  grid-column: 1 / span 3;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style04.css" />
+    <script
+      src="https://kit.fontawesome.com/7b09c8acb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ROBLOX_쌤ver</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!--login-->
+      <header>
+        <form action="https://lacalhost:3000/login" method="post">
+          <div id="login">
+            <input type="submit" value="로그인" />
+          </div>
+        </form>
+      </header>
+
+      <!--logo-->
+      <div id="logo"></div>
+
+      <!--logon-->
+      <section id="logon">
+        <form action="https://lacalhost:3000/logon" method="post">
+          <article class="inner_content title">가입하시고 즐겨보세요!</article>
+          <article class="inner_content birthday">생년월일</article>
+          <div id="calendar">
+            <select name="year" id="year">
+              <option selected disabled>년</option>
+              <option value="2024">2024년</option>
+              <option value="2023">2023년</option>
+              <option value="2022">2022년</option>
+              <option value="2021">2021년</option>
+              <option value="2020">2020년</option>
+              <option value="2019">2019년</option>
+              <option value="2018">2018년</option>
+              <option value="2017">2017년</option>
+              <option value="2016">2016년</option>
+              <option value="2015">2015년</option>
+              <option value="2014">2014년</option>
+            </select>
+            <select name="month" id="month">
+              <option selected disabled>월</option>
+              <option value="jan">1월</option>
+              <option value="feb">2월</option>
+              <option value="mar">3월</option>
+              <option value="apr">4월</option>
+              <option value="mar">5월</option>
+              <option value="jun">6월</option>
+              <option value="jul">7월</option>
+              <option value="oct">8월</option>
+              <option value="sep">9월</option>
+              <option value="jan">10월</option>
+              <option value="jan">11월</option>
+              <option value="jan">12월</option>
+            </select>
+            <select name="day" id="day">
+              <option selected disabled>일</option>
+              <option value="01">01일</option>
+              <option value="02">02일</option>
+              <option value="03">03일</option>
+              <option value="04">04일</option>
+              <option value="05">05일</option>
+              <option value="06">06일</option>
+              <option value="07">07일</option>
+              <option value="08">08일</option>
+              <option value="09">09일</option>
+              <option value="10">10일</option>
+              <option value="11">11일</option>
+              <option value="12">12일</option>
+              <option value="13">13일</option>
+              <option value="14">14일</option>
+              <option value="15">15일</option>
+              <option value="16">16일</option>
+              <option value="17">17일</option>
+              <option value="18">18일</option>
+              <option value="19">19일</option>
+              <option value="20">20일</option>
+              <option value="21">21일</option>
+              <option value="22">22일</option>
+              <option value="23">23일</option>
+              <option value="24">24일</option>
+              <option value="25">25일</option>
+              <option value="26">26일</option>
+              <option value="27">27일</option>
+              <option value="28">28일</option>
+              <option value="29">29일</option>
+              <option value="30">30일</option>
+            </select>
+          </div>
+          <article class="inner_content username">
+            <label for="user">사용자 이름</label>
+            <input type="text" id="user" placeholder="실명을 사용하지 마세요" />
+          </article>
+          <article class="inner_content userpassword">
+            <label for="password">비밀번호</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="영문 알파벳 최소 8자 이상"
+            />
+          </article>
+          <article class="inner_content gender">성별(선택사항)</article>
+          <div id="gender_btn">
+            <input type="submit" value="여성" />
+            <input type="submit" value="남성" />
+          </div>
+          <article class="inner_content check">
+            <div>
+              <div id="firstcheck">
+                <input type="checkbox" name="auth" id="auth" />
+                <label for="auth">이용약관을 검토했으며 이에 동의합니다.</label>
+              </div>
+              <div id="secondcheck">
+                <input type="checkbox" name="private" id="private" />
+                <label for="private">개인정보 처리방침에 동의합니다.</label>
+              </div>
+            </div>
+          </article>
+          <article class="inner_content btn">
+            <input type="submit" value="회원가입" />
+          </article>
+        </form>
+      </section>
+
+      <!--footer-->
+      <footer>
+        <h3>다양한 기기로 ROBLOX를 즐기세요</h3>
+        <div id="items">
+          <div class="inner_item">
+            <span><i class="fa-brands fa-apple"></i></span>
+            <div class="inner_item_info">
+              <div class="inner_item_title">GET IT ON</div>
+              <div class="inner_item_body">App Store</div>
+            </div>
+          </div>
+          <div class="inner_item">
+            <span><i class="fa-brands fa-google-play"></i></span>
+            <div class="inner_item_info">
+              <div class="inner_item_title">GET IT ON</div>
+              <div class="inner_item_body">Google Play</div>
+            </div>
+          </div>
+          <div class="inner_item">
+            <span><i class="fa-brands fa-meta"></i></span>
+            <div class="inner_item_info">
+              <div class="inner_item_title">GET IT ON</div>
+              <div class="inner_item_body">Meta Quest</div>
+            </div>
+          </div>
+          <div class="inner_item">
+            <span><i class="fa-brands fa-playstation"></i></span>
+            <div class="inner_item_info">
+              <div class="inner_item_title">GET IT ON</div>
+              <div class="inner_item_body">Play Station</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

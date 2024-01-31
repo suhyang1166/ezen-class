@@ -1,0 +1,45 @@
+@import url(./reset.css);
+@import url(./font.css);
+
+/* common */
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#contents {
+  width: 100%;
+  height: 100%;
+}
+/* video page */
+#video-page {
+  width: 100%;
+  height: 1080px;
+  border: 1px solid #f00;
+  position: relative;
+}
+.video-type-wrap {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1280px;
+  height: 542px;
+  border: 1px solid #f00;
+}
+.video-type-first {
+  width: 250px;
+  height: 100%;
+  border: 1px solid #f00;
+}
+.video-bg {
+  width: 100%;
+  height: 780px;
+  background: #00f;
+}
+
+#mainstory {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}

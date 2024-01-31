@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style02.css" />
+    <!--아이콘 넣기전 무조건 넣어야함!!-->
+    <script
+      src="https://kit.fontawesome.com/7b09c8acb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="menusearch" />
+    <div id="wrap">
+      <!-- Header -->
+      <header>
+        <nav>
+          <div class="nav_left">
+            <!--form안에 select 있는게 원칙-->
+            <form action="https://localhost:3000/menu">
+              <select name="menu" id="menu">
+                <option value="home">우리집</option>
+                <option value="home">사무실</option>
+              </select>
+            </form>
+          </div>
+          <div class="nav_right">
+            <label for="menusearch">
+              <span><i class="fa-solid fa-sliders"></i></span>
+            </label>
+            <span><i class="fa-regular fa-bell"></i></span>
+            <span><i class="fa-regular fa-circle-user"></i></span>
+          </div>
+        </nav>
+        <div id="search">
+          <form action="https://localhost:3000" method="get">
+            <span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" placeholder="육회비빔밥? 쌀국수? 육개장?" />
+          </form>
+        </div>
+      </header>
+
+      <!-- popup-->
+      <div id="popup"></div>
+
+      <!-- Section -->
+      <section>
+        <!-- <article id="deliver">
+          <div id="deliver_page"><img src="./img/b_8.jpg" alt="b8" /></div>
+        </article> -->
+        <article id="badges">
+          <div class="badge first"><span>#</span> 재주문 많아요</div>
+          <div class="badge second"><span>#</span> 알뜰배달 런칭</div>
+          <div class="badge third"><span>#</span> 쿠폰</div>
+        </article>
+        <article id="contents">
+          <div class="inner_content top">
+            <img src="./img/b_1.jpg" alt="b1" />
+            <img src="./img/b_2.jpg" alt="b2" />
+          </div>
+          <div class="inner_content middletop">
+            <img src="./img/b_3.jpg" alt="b3" />
+          </div>
+          <div class="inner_content middlebottom">
+            <img src="./img/b_4.jpg" alt="b4" />
+          </div>
+          <div class="inner_content bottom">
+            <img src="./img/b_5.jpg" alt="b5" />
+            <img src="./img/b_6.jpg" alt="b6" />
+          </div>
+        </article>
+        <article id="banner">
+          <img src="./img/b_7.jpg" alt="b7" />
+        </article>
+      </section>
+    </div>
+    <!--sh.ver-->
+    <!-- <div id="main">
+      <header id="main_header">
+        <div id="main_header_icon">
+          <h3>우리집</h3>
+            <nav id="icons">
+            <option value="#">
+              <section><a href="#">아이콘</a></section>
+              <section><a href="#">아이콘</a></section>
+              <section><a href="#">아이콘</a></section>
+            </option>
+            </nav>
+          </div>
+            <div>
+              <label for="search"></label>
+              <input
+                type="text"
+                id="search" 
+                placeholder="육회비빔밥? 쌀국수? 육개장?"
+              />
+            </div>
+          </div>
+        </header>
+        <div id="hot">
+          <input class="hot 1" type="submit" value="# 재주문 많아요">
+          <input class="hot 2" type="submit" value="# 알뜰배달 런칭">
+          <input class="hot 3" type="submit" value="# 쿠폰 받기">
+        </div>
+        <div id="img">
+          <section class="img 01"></section>
+          <section class="img 02"></section>
+        </div>
+        <div id="img_01">
+          <section class="img_01"></section>
+        </div>
+        <div id="img_02">
+          <section class="img_02"></section>
+        </div>
+         <div id="img">
+          <section class="img 03"></section>
+          <section class="img 04"></section>
+        </div>
+    </div> -->
+  </body>
+</html>
