@@ -1,0 +1,71 @@
+%shape {
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+  height: 500px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "text text" "box1 box2" "box3 box4" "box5 .";
+  h1 {
+    grid-area: text;
+  }
+  .frame {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    .shape01::before {
+      @extend %shape;
+      content: "";
+      grid-area: box1;
+      background: #f24d18;
+      display: grid;
+      border-radius: 50px 0 0 50px;
+    }
+    .shape01::after {
+      @extend %shape;
+      content: "";
+      grid-area: box2;
+      background: #a359ff;
+      display: grid;
+      border-radius: 50px 0 0 50px;
+    }
+    .shape02::before {
+      @extend %shape;
+      content: "";
+      grid-area: box3;
+      background: #ff7362;
+      display: grid;
+      border-radius: 0 50px 50px 0;
+    }
+    .shape02::after {
+      @extend %shape;
+      content: "";
+      grid-area: box4;
+      background: #13bdfe;
+      display: grid;
+      border-radius: 50px;
+    }
+    .shape03::before {
+      @extend %shape;
+      content: "";
+      grid-area: box5;
+      background: #02d084;
+      display: grid;
+      border-radius: 50px 0 50px 50px;
+    }
+  }
+}

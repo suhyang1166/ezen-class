@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .icons:active, .container .icons {
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+}
+.container .icons {
+  display: block;
+  background: transparent;
+}
+.container .icons:active {
+  display: block;
+  box-shadow: 0 0 50px #fff;
+}/*# sourceMappingURL=style02.css.map */
