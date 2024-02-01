@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: gm B;
+  src: url(./font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: gm M;
+  src: url(./font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: gm L;
+  src: url(./font/GmarketSansTTFLight.ttf);
+}
+#wrap #slide .main-contents div {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  margin: 80px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  font-family: gm M;
+  font-size: 50px;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(149, 149, 149, 0.4);
+}
+
+body {
+  font-family: gm L;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  width: 1280px;
+  width: 80rem;
+  height: 1080px;
+  height: 67.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+#wrap h1 {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 70px;
+}
+#wrap h1 span {
+  font-family: gm B;
+  font-size: 150px;
+}
+#wrap #slide {
+  width: 40rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#wrap #slide .main-contents:hover {
+  animation: flow 1000s infinite linear;
+}
+#wrap #slide .main-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -50%);
+  animation: flow 10s infinite linear;
+}
+#wrap #slide .main-contents div:nth-child(1) {
+  background: linear-gradient(135deg, #fff6b7, #f6416c);
+}
+#wrap #slide .main-contents div:nth-child(2) {
+  background: linear-gradient(135deg, #72edf2, #5151e5);
+}
+#wrap #slide .main-contents div:nth-child(3) {
+  background: linear-gradient(135deg, #f0ff00, #58cffb);
+}
+#wrap #slide .main-contents div:nth-child(4) {
+  background: linear-gradient(135deg, #eead92, #6018dc);
+}
+#wrap #slide .main-contents div:nth-child(5) {
+  background: linear-gradient(135deg, #fff6b7, #f6416c);
+}
+#wrap #slide .main-contents div:nth-child(6) {
+  background: linear-gradient(135deg, #72edf2, #5151e5);
+}
+#wrap #slide .main-contents div:nth-child(7) {
+  background: linear-gradient(135deg, #f0ff00, #58cffb);
+}
+#wrap #slide .main-contents div:nth-child(8) {
+  background: linear-gradient(135deg, #eead92, #6018dc);
+}
+
+@keyframes flow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
