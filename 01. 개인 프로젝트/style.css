@@ -42,7 +42,7 @@ a {
 body {
   font-family: gm L;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,9 +73,6 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-}
-#wrap #slide .main-contents:hover {
-  animation: flow 1000s infinite linear;
 }
 #wrap #slide .main-contents {
   position: absolute;
