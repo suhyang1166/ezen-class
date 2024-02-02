@@ -35,7 +35,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform-style: preserve-3d;
   h1 {
     width: 350px;
     display: flex;
@@ -65,6 +64,7 @@ body {
       left: 50%;
       transform: translate(-53%, -50%);
       animation: flow 10s infinite linear;
+      cursor: pointer;
       div {
         @extend %mainbox;
       }

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: gm B;
+  src: url(./font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: gm M;
+  src: url(./font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: gm L;
+  src: url(./font/GmarketSansTTFLight.ttf);
+}
+body {
+  font-family: gm L;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+section {
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  height: 100%;
+  position: relative;
+}
+section #main-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+}
+section #main-bar .bar-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  gap: 3.125rem;
+  width: 100%;
+  height: 100px;
+}
+section #main-bar .bar-list a {
+  font-family: GM M;
+  font-size: 18px;
+}
+section #main-bar .bar-list a:hover {
+  display: block;
+  border-bottom: 3px solid #000;
+}/*# sourceMappingURL=style01.css.map */

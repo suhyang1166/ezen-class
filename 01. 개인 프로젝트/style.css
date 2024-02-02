@@ -56,7 +56,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform-style: preserve-3d;
 }
 #wrap h1 {
   width: 350px;
@@ -84,6 +83,7 @@ body {
   left: 50%;
   transform: translate(-53%, -50%);
   animation: flow 10s infinite linear;
+  cursor: pointer;
 }
 #wrap #slide .main-contents div:nth-child(1) {
   background: linear-gradient(135deg, #fff6b7, #f6416c);
