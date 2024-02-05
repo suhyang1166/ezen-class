@@ -1,5 +1,5 @@
 const phone = document.querySelector(".hello-content");
-const target = document.querySelector(".text-ani");
+const move = document.querySelector(".text-ani");
 const gnb = document.querySelector("#main-bar");
 
 console.log(gnb);
@@ -13,12 +13,25 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// 스크롤
+// const observer = new IntersectionObserver((move) => {
+//   move.forEach((move) => {
+//     if (move.isIntersecting) {
+//       move.target.classList.add("click");
+//     } else {
+//       move.target.classList.remove("click");
+//     }
+//   });
+// });
+
+// move.forEach((move) => observer.observe(move));
+
 // 텍스트 타이핑
 const textArr = ["H", "E", "L", "L", "O", ",", " ", "I", "'", "m"];
 
 function textAni(randomArr) {
   if (randomArr.length > 0) {
-    target.textContent += randomArr.shift();
+    move.textContent += randomArr.shift();
     setTimeout(function () {
       textAni(randomArr);
     }, 500);
@@ -29,6 +42,6 @@ textAni(textArr);
 
 // 커서 깜빡임
 function blink() {
-  target.classList.toggle("active");
+  move.classList.toggle("active");
 }
 setInterval(blink, 400);

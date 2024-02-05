@@ -254,20 +254,20 @@ body {
 
 /* 말풍선 페이지 */
 #fourth {
-  border: 1px solid #0f0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1280px;
+  height: 2000px;
 }
 #fourth .emoji {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 620px;
   height: 150px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
 }
 #fourth .emoji .emo-img {
   position: absolute;
@@ -281,7 +281,6 @@ body {
 }
 #fourth .emoji .messages-01 {
   position: relative;
-  border: 1px solid #00f;
   width: 620px;
   height: 150px;
 }
@@ -306,6 +305,13 @@ body {
   background: #000;
 }
 #fourth .emoji .messages-01 .message-long {
+  cursor: pointer;
+}
+#fourth .emoji .messages-01 .message-long input[name=check-item] {
+  display: none;
+}
+#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div {
+  display: block;
   position: absolute;
   top: 50%;
   left: 100px;
@@ -317,26 +323,32 @@ body {
   line-height: 75px;
   border-radius: 30px;
   font-size: 36px;
-  cursor: pointer;
-}
-#fourth .emoji .messages-01 .message-long input[name=check-item] {
-  display: none;
-}
-#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div {
-  border: none;
-}
-#fourth .emoji .messages-01 .message-long div {
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
   font-size: 36px;
 }
+#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div span {
+  font-family: gm B;
+}
+#fourth .emoji .messages-01 .message-long div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 620px;
+  height: 300px;
+}
 #fourth .emoji .messages-01 .message-long div span {
   font-family: gm B;
 }
 #fourth .messages-02 {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 125px;
+  height: 75px;
 }
 #fourth .messages-02 .message-short {
   position: absolute;
@@ -355,6 +367,12 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #000;
+}
+#fourth .messages-02 .vector-wh {
+  position: absolute;
+  bottom: 5px;
+  right: -8px;
+  transform: rotateY(-180deg);
 }
 
 @keyframes message-1 {

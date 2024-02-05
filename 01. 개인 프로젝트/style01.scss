@@ -147,22 +147,23 @@ body {
         size: 50px;
         family: GM B;
       }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: #fff;
+      }
+      &.active::after {
+        display: none;
+      }
+      // &.click {
+      //   opacity: 1;
+      // }
     }
-    .text-ani::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 3px;
-      height: 100%;
-      background: #fff;
-    }
-    .text-ani.active::after {
-      display: none;
-    }
-    // #text-ani.clicked {
-    //   opacity: 1;
-    // }
+
     .phone-box {
       width: 390px;
       height: 750px;
@@ -259,20 +260,23 @@ body {
 
 /* 말풍선 페이지 */
 #fourth {
-  border: 1px solid #0f0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+  // border: 1px solid #0f0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 1280px;
+  height: 2000px;
   .emoji {
     position: relative;
     // border: 1px solid #f00;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 620px;
     height: 150px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+
     .emo-img {
       position: absolute;
       left: 0;
@@ -285,7 +289,7 @@ body {
     }
     .messages-01 {
       position: relative;
-      border: 1px solid #00f;
+      // border: 1px solid #00f;
       width: 620px;
       height: 150px;
       .message-short {
@@ -310,32 +314,40 @@ body {
         }
       }
       .message-long {
-        position: absolute;
-        top: 50%;
-        left: 100px;
-        transform: translateY(-50%);
-        width: 500px;
-        height: 75px;
-        background: #fff;
-        text-align: center;
-        line-height: 75px;
-        border-radius: 30px;
-        font-size: 36px;
         cursor: pointer;
         input[name="check-item"] {
           display: none;
           &:checked + div {
-            border: none;
-          }
-          &:checked + div span {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 75px;
+            background: #fff;
+            text-align: center;
+            line-height: 75px;
+            border-radius: 30px;
+            font-size: 36px;
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            transform: translateY(-50%);
+            font-size: 36px;
+            span {
+              font-family: gm B;
+            }
           }
         }
         div {
+          // border: 1px solid #0f0;
           position: absolute;
           top: 50%;
-          left: 100px;
+          left: 0;
           transform: translateY(-50%);
-          font-size: 36px;
+          width: 620px;
+          height: 300px;
           span {
             font-family: gm B;
           }
@@ -344,7 +356,11 @@ body {
     }
   }
   .messages-02 {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 125px;
+    height: 75px;
     .message-short {
       position: absolute;
       bottom: 0;
@@ -362,6 +378,12 @@ body {
         border-radius: 50%;
         background: #000;
       }
+    }
+    .vector-wh {
+      position: absolute;
+      bottom: 5px;
+      right: -8px;
+      transform: rotateY(-180deg);
     }
   }
 }
