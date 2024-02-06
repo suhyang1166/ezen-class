@@ -1,8 +1,9 @@
 const phone = document.querySelector(".hello-content");
 const move = document.querySelector(".text-ani");
 const gnb = document.querySelector("#main-bar");
+const like = document.querySelector(".like");
 
-console.log(gnb);
+console.log(like);
 
 // gnb 컬러 변경
 window.addEventListener("scroll", () => {
@@ -45,3 +46,8 @@ function blink() {
   move.classList.toggle("active");
 }
 setInterval(blink, 400);
+
+// 좋아요
+like.addEventListener("click", () => {
+  like.classList.toggle("active");
+});

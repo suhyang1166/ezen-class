@@ -84,6 +84,9 @@ body {
 #first #main-bar .bar-list a:hover {
   color: #999;
 }
+#first #main-bar::before {
+  content: attr();
+}
 #first #main-bar:hover {
   color: #ddd;
 }
@@ -304,6 +307,13 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #000;
+  animation: flow 1.5s linear infinite;
+}
+#fourth .emoji .messages-01 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#fourth .emoji .messages-01 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
 }
 #fourth .emoji .messages-01 .message-long {
   cursor: pointer;
@@ -368,6 +378,13 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #000;
+  animation: flow 1.5s linear infinite;
+}
+#fourth .messages-02 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#fourth .messages-02 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
 }
 #fourth .messages-02 .vector-wh {
   position: absolute;
@@ -376,18 +393,14 @@ body {
   transform: rotateY(-180deg);
 }
 
-@keyframes message-1 {
-  0% {
+@keyframes flow {
+  0%, 100% {
     opacity: 0;
-  }
-  25% {
-    opacity: 0.5;
+    transform: scale(0.5);
   }
   50% {
     opacity: 1;
-  }
-  100% {
-    opacity: 1;
+    transform: scale(1.2);
   }
 }
 /* 인스타 페이지 */
@@ -497,41 +510,42 @@ body {
   height: 630px;
   margin-top: 45px;
 }
-#fifth .pics ul {
+#fifth .pics div {
   display: grid;
   justify-content: space-between;
   align-items: center;
   gap: 45px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-row: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
-#fifth .pics ul li {
+#fifth .pics div span {
   width: 270px;
   height: 270px;
   cursor: pointer;
   display: grid;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
 }
-#fifth .pics ul li:nth-child(1) {
+#fifth .pics div span:nth-child(1) {
   background: url(./img/last.jpg) center/cover no-repeat;
 }
-#fifth .pics ul li:nth-child(2) {
+#fifth .pics div span:nth-child(2) {
   background: url(./img/aa.jpg) center/cover no-repeat;
 }
-#fifth .pics ul li:nth-child(3) {
+#fifth .pics div span:nth-child(3) {
   background: url(./img/mon.jpg) center/cover no-repeat;
 }
-#fifth .pics ul li:nth-child(4) {
+#fifth .pics div span:nth-child(4) {
   background: url(./img/busan.jpg) center/cover no-repeat;
 }
-#fifth .pics ul li:nth-child(5) {
+#fifth .pics div span:nth-child(5) {
   background: url(./img/color.jpg) center/cover no-repeat;
 }
-#fifth .pics ul li:nth-child(6) {
+#fifth .pics div span:nth-child(6) {
   background: url(./img/jeju.jpg) center/cover no-repeat;
 }
-#fifth .pics ul li:hover {
+#fifth .pics div span:hover {
   opacity: 0.5;
   transform: scale(1.1);
 }
@@ -560,12 +574,17 @@ body {
   border: 3px solid #fff;
   border-radius: 15px;
 }
-#fifth .bottom-bar ul li:nth-child(4) span {
+#fifth .bottom-bar ul li:nth-child(4)::before {
+  content: "\f08a";
+  font-family: fontawesome;
+  font-size: 60px;
+  color: #fff;
   cursor: pointer;
 }
-#fifth .bottom-bar ul li:nth-child(4) span:hover {
+#fifth .bottom-bar ul li:nth-child(4).active::before {
+  content: "\f004";
+  text-shadow: 0 0 20px #f00;
   color: #f00;
-  transform: scale(1.1);
 }
 #fifth .bottom-bar ul li:last-child {
   display: grid;
@@ -646,6 +665,13 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #000;
+  animation: flow 1.5s linear infinite;
+}
+#sixth .emoji .messages-01 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#sixth .emoji .messages-01 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
 }
 #sixth .emoji .messages-01 .message-long {
   cursor: pointer;
@@ -706,6 +732,13 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #000;
+  animation: flow 1.5s linear infinite;
+}
+#sixth .messages-02 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#sixth .messages-02 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
 }
 #sixth .messages-02 .vector-wh {
   position: absolute;
@@ -772,6 +805,13 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #fff;
+  animation: flow 1.5s linear infinite;
+}
+#eighth article .emoji .messages-01 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#eighth article .emoji .messages-01 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
 }
 #eighth article .emoji .messages-01 .message-long {
   cursor: pointer;
@@ -832,6 +872,13 @@ body {
   height: 15px;
   border-radius: 50%;
   background: #fff;
+  animation: flow 1.5s linear infinite;
+}
+#eighth article .messages-02 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#eighth article .messages-02 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
 }
 #eighth article .messages-02 .vector-bk {
   position: absolute;
