@@ -1,0 +1,28 @@
+.parent {
+  border: 5px solid green;
+  display: flex;
+}
+
+.parent div {
+  width: 100px;
+  height: 50px;
+  background: crimson;
+  color: #fff;
+  text-align: center;
+}
+/* .child1 {
+  margin-right: auto;
+} */
+/* .child3 {
+  margin-left: auto;
+} */
+
+/* .child1,
+.child2,
+.child3 {
+  margin: auto;
+} */
+
+.child2 {
+  margin: auto;
+}

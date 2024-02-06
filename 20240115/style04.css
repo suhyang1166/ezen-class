@@ -1,0 +1,36 @@
+/* @import url(./resetcss.css); */
+
+/* * {
+  font-size: 30px;
+}
+
+div {
+  font-size: 20px;
+}
+
+p:nth-child(2) {
+  font-size: 2em;
+}
+
+p:nth-child(3) {
+  font-size: 50px;
+}
+
+p:nth-child(4) {
+  font-size: 200%;
+}
+
+p:nth-child(5) {
+  font-size: 2rem;
+} */
+
+#box1 {
+  width: 200px;
+  height: 200px;
+  background: #f00;
+}
+#box2 {
+  width: 50vw;
+  height: 30vh;
+  background: #f00;
+}

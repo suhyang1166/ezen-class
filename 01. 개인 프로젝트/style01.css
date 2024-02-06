@@ -1,0 +1,391 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: gm B;
+  src: url(./font/GmarketSansTTFBold.ttf);
+}
+@font-face {
+  font-family: gm M;
+  src: url(./font/GmarketSansTTFMedium.ttf);
+}
+@font-face {
+  font-family: gm L;
+  src: url(./font/GmarketSansTTFLight.ttf);
+}
+body {
+  font-family: gm L;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  background: #000;
+}
+
+/* gnb/video page */
+#first {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  height: 2000px;
+  position: relative;
+}
+#first .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 780px;
+  background: #fff;
+}
+#first #main-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  z-index: 100;
+}
+#first #main-bar .bar-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  gap: 3.125rem;
+  width: 1280px;
+  height: 100px;
+}
+#first #main-bar .bar-list a {
+  font-family: GM M;
+  font-size: 18px;
+  cursor: pointer;
+}
+#first #main-bar .bar-list a:hover {
+  color: #999;
+}
+#first #main-bar:hover {
+  color: #ddd;
+}
+#first #main-bar.active {
+  background: #000;
+  color: #fff;
+  transition: all 0.3s;
+}
+#first #main-bar.active:hover {
+  color: #333;
+}
+#first #contents-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1280px;
+  height: 1080px;
+}
+#first #contents-box .video-type {
+  position: absolute;
+  top: 320px;
+  left: 0;
+  width: 1280px;
+  height: 542px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+#first #contents-box .video-type video {
+  width: 250px;
+  height: 542px;
+  border: 10px solid #373737;
+  border-radius: 30px;
+  background: #eee;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#first #contents-box .gra-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  height: 300px;
+}
+#first #contents-box .gra-box span {
+  width: 250px;
+  height: 1000px;
+  z-index: -10;
+  background: linear-gradient(rgb(55, 55, 55), rgba(0, 0, 0, 0));
+}
+
+/* intro page */
+#second {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#second .hello-content .text-ani {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-right: 10px;
+  color: #fff;
+  font-size: 50px;
+  font-family: GM B;
+}
+#second .hello-content .text-ani::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: #fff;
+}
+#second .hello-content .text-ani.active::after {
+  display: none;
+}
+#second .hello-content .phone-box {
+  width: 390px;
+  height: 750px;
+  border: 15px solid #373737;
+  border-radius: 60px;
+  position: relative;
+}
+#second .hello-content .phone-box div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 120px;
+  height: 26px;
+  background: #373737;
+  border-radius: 0 0 30px 30px;
+}
+
+/* 소개 페이지 */
+#third {
+  width: 100%;
+  height: 1080px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#third .hello-content {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 390px 565px;
+  grid-gap: 110px;
+  width: 1280px;
+  height: 750px;
+}
+#third .hello-content .phone-box {
+  width: 390px;
+  height: 750px;
+  border: 15px solid #373737;
+  border-radius: 60px;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0), #000);
+}
+#third .hello-content .phone-box div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  height: 750px;
+  background: url(./img/sh.png) center/cover no-repeat;
+  border-radius: 60px;
+  z-index: -10;
+}
+#third .hello-content .my-content {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+}
+#third .hello-content .my-content p:nth-child(1) {
+  font-family: gm B;
+  font-size: 80px;
+  margin: 137px 0 81px 0;
+}
+#third .hello-content .my-content p:nth-child(2) {
+  font-size: 32px;
+  margin-bottom: 81px;
+}
+#third .hello-content .my-content .work p {
+  font-size: 24px;
+  font-family: gm L;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+#third .hello-content .my-content .work p:nth-child(3) {
+  margin-bottom: 0;
+}
+
+/* 말풍선 페이지 */
+#fourth {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1280px;
+  height: 2000px;
+}
+#fourth .emoji {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 620px;
+  height: 150px;
+}
+#fourth .emoji .emo-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#fourth .emoji .vector-wh {
+  position: absolute;
+  top: 50%;
+  left: 92px;
+}
+#fourth .emoji .messages-01 {
+  position: relative;
+  width: 620px;
+  height: 150px;
+}
+#fourth .emoji .messages-01 .message-short {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 125px;
+  height: 75px;
+  background: #fff;
+  text-align: center;
+  line-height: 75px;
+  border-radius: 30px;
+  font-size: 36px;
+}
+#fourth .emoji .messages-01 .message-short span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+}
+#fourth .emoji .messages-01 .message-long {
+  cursor: pointer;
+}
+#fourth .emoji .messages-01 .message-long input[name=check-item] {
+  display: none;
+}
+#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 75px;
+  background: #fff;
+  text-align: center;
+  line-height: 75px;
+  border-radius: 30px;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  font-size: 36px;
+}
+#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div span {
+  font-family: gm B;
+}
+#fourth .emoji .messages-01 .message-long div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 620px;
+  height: 300px;
+}
+#fourth .emoji .messages-01 .message-long div span {
+  font-family: gm B;
+}
+#fourth .messages-02 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 125px;
+  height: 75px;
+}
+#fourth .messages-02 .message-short {
+  position: absolute;
+  bottom: 0;
+  width: 125px;
+  height: 75px;
+  background: #fff;
+  text-align: center;
+  line-height: 75px;
+  border-radius: 30px;
+  font-size: 36px;
+}
+#fourth .messages-02 .message-short span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+}
+#fourth .messages-02 .vector-wh {
+  position: absolute;
+  bottom: 5px;
+  right: -8px;
+  transform: rotateY(-180deg);
+}
+
+@keyframes message-1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style01.css.map */

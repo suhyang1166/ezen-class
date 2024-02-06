@@ -1,0 +1,50 @@
+@import url(./reset.css);
+
+/* .box {
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+.box:active {
+  background: red;
+  transition: 2s;
+} */
+
+#gragh {
+  width: 610px;
+  border: 3px solid #000;
+}
+
+/*transition은 원본데이터인 .bar에 줘야함>hover에 주는거 아님*/
+.bar {
+  width: 10px;
+  height: 50px;
+  background: orange;
+  margin: 5px;
+
+  transition-property: background, width;
+  transition-duration: 1s, 5s;
+}
+#gragh:hover > .bar {
+  width: 600px;
+}
+#gragh:hover > .bar:nth-child(1) {
+  background: red;
+  width: 100px;
+}
+#gragh:hover > .bar:nth-child(2) {
+  background: blue;
+  width: 300px;
+}
+#gragh:hover > .bar:nth-child(3) {
+  background: green;
+  width: 400px;
+}
+#gragh:hover > .bar:nth-child(4) {
+  background: yellow;
+  width: 200px;
+}
+#gragh:hover > .bar:nth-child(5) {
+  background: pink;
+  width: 400px;
+}

@@ -1,0 +1,237 @@
+@import "reset";
+@import "font";
+
+body {
+  font-family: gm L;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  background: #000;
+  // border: 1px solid #f00;
+}
+
+/* gnb */
+#first {
+  // border: 1px solid #00f;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  #main-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    z-index: 100;
+    // border: 1px solid #f00;
+    .bar-list {
+      // border: 1px solid #00f;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 50px;
+      gap: 3.125rem;
+      width: 1280px;
+      height: 100px;
+      a {
+        font-family: GM M;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      a:hover {
+        color: #373737;
+      }
+    }
+  }
+  #main-bar.active {
+    background: #000;
+    color: #fff;
+    transition: all 0.3s;
+  }
+}
+
+/* 소개 페이지 */
+#third {
+  width: 100%;
+  height: 1080px;
+  // border: 1px solid #0f0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  .hello-content {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 390px 565px;
+    grid-gap: 110px;
+    width: 1280px;
+    height: 750px;
+    // border: 1px solid #00f;
+    .phone-box {
+      width: 390px;
+      height: 750px;
+      border: 15px solid #373737;
+      border-radius: 60px;
+      position: relative;
+      background: linear-gradient(#00000000, #000);
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 390px;
+        height: 750px;
+        background: url(./img/sh.png) center/cover no-repeat;
+        border-radius: 60px;
+        z-index: -10;
+      }
+    }
+    .my-content {
+      position: absolute;
+      right: 5%;
+      bottom: 0;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 2px;
+      p:nth-child(1) {
+        font: {
+          family: gm B;
+          size: 80px;
+        }
+        margin: 137px 0 81px 0;
+      }
+      p:nth-child(2) {
+        font: {
+          size: 32px;
+        }
+        margin-bottom: 81px;
+      }
+      .work {
+        p {
+          font: {
+            size: 24px;
+            family: gm L;
+          }
+          margin-bottom: 20px;
+        }
+        p:nth-child(3) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* 말풍선 페이지 */
+#fourth {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  .emoji {
+    position: relative;
+    // border: 1px solid #f00;
+    width: 620px;
+    height: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .emo-img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .vector-wh {
+      position: absolute;
+      top: 50%;
+      left: 92px;
+    }
+    .messages-01 {
+      .message-short {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+        width: 125px;
+        height: 75px;
+        background: #fff;
+        text-align: center;
+        line-height: 75px;
+        border-radius: 30px;
+        font-size: 36px;
+        span {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: #000;
+        }
+      }
+      .message-long {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+        width: 520px;
+        height: 75px;
+        background: #fff;
+        text-align: center;
+        line-height: 75px;
+        border-radius: 30px;
+        font-size: 36px;
+        opacity: 0;
+        animation: message-1 linear 2s;
+        span {
+          font-family: gm b;
+        }
+      }
+    }
+  }
+  .messages-02 {
+    .message-short {
+      position: absolute;
+      bottom: 0;
+      width: 125px;
+      height: 75px;
+      background: #fff;
+      text-align: center;
+      line-height: 75px;
+      border-radius: 30px;
+      font-size: 36px;
+      span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #000;
+      }
+    }
+  }
+}
+@keyframes message-1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

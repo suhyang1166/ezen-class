@@ -1,0 +1,66 @@
+.container .frame .shape03::before, .container .frame .shape02::after, .container .frame .shape02::before, .container .frame .shape01::after, .container .frame .shape01::before {
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+  height: 500px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "text text" "box1 box2" "box3 box4" "box5 .";
+}
+.container h1 {
+  grid-area: text;
+}
+.container .frame {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.container .frame .shape01::before {
+  content: "";
+  grid-area: box1;
+  background: #f24d18;
+  display: grid;
+  border-radius: 50px 0 0 50px;
+}
+.container .frame .shape01::after {
+  content: "";
+  grid-area: box2;
+  background: #a359ff;
+  display: grid;
+  border-radius: 50px 0 0 50px;
+}
+.container .frame .shape02::before {
+  content: "";
+  grid-area: box3;
+  background: #ff7362;
+  display: grid;
+  border-radius: 0 50px 50px 0;
+}
+.container .frame .shape02::after {
+  content: "";
+  grid-area: box4;
+  background: #13bdfe;
+  display: grid;
+  border-radius: 50px;
+}
+.container .frame .shape03::before {
+  content: "";
+  grid-area: box5;
+  background: #02d084;
+  display: grid;
+  border-radius: 50px 0 50px 50px;
+}/*# sourceMappingURL=style01.css.map */
