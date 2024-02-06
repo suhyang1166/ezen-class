@@ -26,6 +26,7 @@ a {
   font-family: gm L;
   src: url(./font/GmarketSansTTFLight.ttf);
 }
+/* common */
 body {
   font-family: gm L;
   width: 100%;
@@ -35,6 +36,19 @@ body {
   align-items: center;
   grid-template-columns: repeat(1, 1fr);
   background: #000;
+  mix-blend-mode: difference;
+}
+
+.cursor {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 110;
 }
 
 /* gnb/video page */
@@ -44,7 +58,7 @@ body {
   align-items: center;
   grid-template-columns: repeat(1, 1fr);
   width: 100%;
-  height: 2000px;
+  height: 100vh;
   position: relative;
 }
 #first .bg {
@@ -77,6 +91,7 @@ body {
   height: 100px;
 }
 #first #main-bar .bar-list a {
+  position: relative;
   font-family: GM M;
   font-size: 18px;
   cursor: pointer;
@@ -84,19 +99,26 @@ body {
 #first #main-bar .bar-list a:hover {
   color: #999;
 }
-#first #main-bar::before {
-  content: attr();
+#first #main-bar .bar-list a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(-140deg, #634edd, #eb3b9b, #fe4743, #fed06a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: 0;
+  transition: all 0.5s;
+  overflow: hidden;
 }
-#first #main-bar:hover {
-  color: #ddd;
+#first #main-bar .bar-list a:hover::before {
+  width: 100%;
 }
 #first #main-bar.active {
   background: #000;
   color: #fff;
   transition: all 0.3s;
-}
-#first #main-bar.active:hover {
-  color: #333;
 }
 #first #contents-box {
   position: absolute;
@@ -115,6 +137,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  z-index: 300;
 }
 #first #contents-box .video-type video {
   width: 250px;
@@ -145,7 +168,7 @@ body {
 /* intro page */
 #second {
   width: 100%;
-  height: 3000px;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -194,7 +217,7 @@ body {
 /* 소개 페이지 */
 #third {
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -212,10 +235,9 @@ body {
 #third .hello-content .phone-box {
   width: 390px;
   height: 750px;
-  border: 15px solid #373737;
   border-radius: 60px;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0), #000);
+  z-index: 500;
 }
 #third .hello-content .phone-box div {
   position: absolute;
@@ -224,9 +246,10 @@ body {
   transform: translate(-50%, -50%);
   width: 390px;
   height: 750px;
-  background: url(./img/sh.png) center/cover no-repeat;
+  border: 15px solid #373737;
+  background: url(./img/sh2.jpg) center/cover no-repeat;
   border-radius: 60px;
-  z-index: -10;
+  z-index: 300;
 }
 #third .hello-content .my-content {
   position: absolute;
@@ -262,7 +285,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1280px;
-  height: 3500px;
+  height: 100vh;
   margin-bottom: 1500px;
 }
 #fourth .emoji {
@@ -278,15 +301,15 @@ body {
   left: 0;
   bottom: 0;
 }
-#fourth .emoji .vector-wh {
-  position: absolute;
-  top: 50%;
-  left: 92px;
-}
 #fourth .emoji .messages-01 {
   position: relative;
   width: 620px;
   height: 150px;
+}
+#fourth .emoji .messages-01 .vector-wh {
+  position: absolute;
+  top: 50%;
+  left: 92px;
 }
 #fourth .emoji .messages-01 .message-short {
   position: absolute;
@@ -315,13 +338,7 @@ body {
 #fourth .emoji .messages-01 .message-short span:nth-child(3) {
   animation-delay: 0.4s;
 }
-#fourth .emoji .messages-01 .message-long {
-  cursor: pointer;
-}
-#fourth .emoji .messages-01 .message-long input[name=check-item] {
-  display: none;
-}
-#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div {
+#fourth .emoji .messages-01 .message-long div {
   display: block;
   position: absolute;
   top: 50%;
@@ -334,32 +351,20 @@ body {
   line-height: 75px;
   border-radius: 30px;
   font-size: 36px;
-  position: absolute;
-  top: 50%;
-  left: 100px;
-  transform: translateY(-50%);
-  font-size: 36px;
-}
-#fourth .emoji .messages-01 .message-long input[name=check-item]:checked + div span {
-  font-family: gm B;
-}
-#fourth .emoji .messages-01 .message-long div {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 620px;
-  height: 300px;
+  animation-delay: 5s;
+  animation: message 3s linear;
 }
 #fourth .emoji .messages-01 .message-long div span {
   font-family: gm B;
 }
 #fourth .messages-02 {
   position: absolute;
-  bottom: 0;
+  bottom: 400px;
   right: 0;
   width: 125px;
   height: 75px;
+  animation-delay: 18s;
+  animation: message 6s linear;
 }
 #fourth .messages-02 .message-short {
   position: absolute;
@@ -403,10 +408,21 @@ body {
     transform: scale(1.2);
   }
 }
+@keyframes message {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* 인스타 페이지 */
 #fifth {
   width: 900px;
-  height: 1500px;
+  height: 100vh;
   position: relative;
   top: 50%;
   left: 50%;
@@ -414,6 +430,7 @@ body {
   transform: translate(-50%, -50%);
 }
 #fifth .heading {
+  margin-top: 100px;
   width: 100%;
   padding: 0 40px;
   height: 255px;
@@ -422,7 +439,7 @@ body {
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
 }
-#fifth .heading .outline {
+#fifth .heading a .outline {
   width: 260px;
   height: 260px;
   border: 5px solid transparent;
@@ -430,7 +447,7 @@ body {
   border-radius: 100%;
   position: relative;
 }
-#fifth .heading .outline .inner {
+#fifth .heading a .outline .inner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -615,13 +632,16 @@ body {
 
 /* 말풍선 페이지 02 */
 #sixth {
+  border: 1px solid #0f0;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1280px;
-  height: 3500px;
+  height: 100vh;
   margin-bottom: 1500px;
+  width: 100%;
+  height: 100%;
 }
 #sixth .emoji {
   position: relative;
@@ -636,15 +656,15 @@ body {
   left: 0;
   bottom: 0;
 }
-#sixth .emoji .vector-wh {
-  position: absolute;
-  top: 50%;
-  left: 92px;
-}
 #sixth .emoji .messages-01 {
   position: relative;
   width: 620px;
   height: 150px;
+}
+#sixth .emoji .messages-01 .vector-wh {
+  position: absolute;
+  top: 50%;
+  left: 92px;
 }
 #sixth .emoji .messages-01 .message-short {
   position: absolute;
@@ -673,13 +693,7 @@ body {
 #sixth .emoji .messages-01 .message-short span:nth-child(3) {
   animation-delay: 0.4s;
 }
-#sixth .emoji .messages-01 .message-long {
-  cursor: pointer;
-}
-#sixth .emoji .messages-01 .message-long input[name=check-item] {
-  display: none;
-}
-#sixth .emoji .messages-01 .message-long input[name=check-item]:checked + div {
+#sixth .emoji .messages-01 .message-long div {
   display: block;
   position: absolute;
   top: 50%;
@@ -687,33 +701,26 @@ body {
   transform: translateY(-50%);
   width: 500px;
   height: 150px;
+  padding-top: 22px;
   background: #fff;
   text-align: center;
-  line-height: 45px;
+  line-height: 36px;
   border-radius: 30px;
   font-size: 36px;
-  padding-top: 10px;
-}
-#sixth .emoji .messages-01 .message-long input[name=check-item]:checked + div span {
-  font-family: gm B;
-}
-#sixth .emoji .messages-01 .message-long div {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 620px;
-  height: 300px;
+  animation-delay: 5s;
+  animation: message 3s linear;
 }
 #sixth .emoji .messages-01 .message-long div span {
   font-family: gm B;
 }
 #sixth .messages-02 {
   position: absolute;
-  bottom: 0;
+  bottom: 400px;
   right: 0;
   width: 125px;
   height: 75px;
+  animation-delay: 18s;
+  animation: message 6s linear;
 }
 #sixth .messages-02 .message-short {
   position: absolute;
@@ -747,22 +754,65 @@ body {
   transform: rotateY(-180deg);
 }
 
+.messages-02 {
+  position: absolute;
+  bottom: 200px;
+  right: 0;
+  width: 125px;
+  height: 75px;
+}
+.messages-02 .message-short {
+  position: absolute;
+  bottom: 0;
+  width: 125px;
+  height: 75px;
+  background: #fff;
+  text-align: center;
+  line-height: 75px;
+  border-radius: 30px;
+  font-size: 36px;
+}
+.messages-02 .message-short span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+  animation: flow 1.5s linear infinite;
+}
+.messages-02 .message-short span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.messages-02 .message-short span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.messages-02 .vector-wh {
+  position: absolute;
+  bottom: 5px;
+  right: -8px;
+  transform: rotateY(-180deg);
+}
+
 /* 말풍선 페이지 03 */
 #eighth {
   width: 100%;
   height: 100vh;
   background: #fff;
 }
-#eighth article {
+#eighth div {
+  width: 100%;
+  height: 100%;
+}
+#eighth div article {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1280px;
-  height: 3500px;
+  height: 100vh;
   margin-bottom: 1500px;
 }
-#eighth article .emoji {
+#eighth div article .emoji {
   position: relative;
   top: 50%;
   left: 50%;
@@ -771,22 +821,22 @@ body {
   height: 150px;
   color: #fff;
 }
-#eighth article .emoji .emo-img {
+#eighth div article .emoji .emo-img {
   position: absolute;
   left: 0;
   bottom: 0;
 }
-#eighth article .emoji .vector-bk {
+#eighth div article .emoji .vector-bk {
   position: absolute;
   top: 50%;
   left: 92px;
 }
-#eighth article .emoji .messages-01 {
+#eighth div article .emoji .messages-01 {
   position: relative;
   width: 620px;
   height: 150px;
 }
-#eighth article .emoji .messages-01 .message-short {
+#eighth div article .emoji .messages-01 .message-short {
   position: absolute;
   top: 50%;
   left: 100px;
@@ -799,7 +849,7 @@ body {
   border-radius: 30px;
   font-size: 36px;
 }
-#eighth article .emoji .messages-01 .message-short span {
+#eighth div article .emoji .messages-01 .message-short span {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -807,19 +857,19 @@ body {
   background: #fff;
   animation: flow 1.5s linear infinite;
 }
-#eighth article .emoji .messages-01 .message-short span:nth-child(2) {
+#eighth div article .emoji .messages-01 .message-short span:nth-child(2) {
   animation-delay: 0.2s;
 }
-#eighth article .emoji .messages-01 .message-short span:nth-child(3) {
+#eighth div article .emoji .messages-01 .message-short span:nth-child(3) {
   animation-delay: 0.4s;
 }
-#eighth article .emoji .messages-01 .message-long {
+#eighth div article .emoji .messages-01 .message-long {
   cursor: pointer;
 }
-#eighth article .emoji .messages-01 .message-long input[name=check-item] {
+#eighth div article .emoji .messages-01 .message-long input[name=check-item] {
   display: none;
 }
-#eighth article .emoji .messages-01 .message-long input[name=check-item]:checked + div {
+#eighth div article .emoji .messages-01 .message-long input[name=check-item]:checked + div {
   display: block;
   position: absolute;
   top: 50%;
@@ -834,10 +884,10 @@ body {
   font-size: 36px;
   padding-top: 17px;
 }
-#eighth article .emoji .messages-01 .message-long input[name=check-item]:checked + div span {
+#eighth div article .emoji .messages-01 .message-long input[name=check-item]:checked + div span {
   font-family: gm B;
 }
-#eighth article .emoji .messages-01 .message-long div {
+#eighth div article .emoji .messages-01 .message-long div {
   position: absolute;
   top: 50%;
   left: 0;
@@ -845,17 +895,17 @@ body {
   width: 620px;
   height: 300px;
 }
-#eighth article .emoji .messages-01 .message-long div span {
+#eighth div article .emoji .messages-01 .message-long div span {
   font-family: gm B;
 }
-#eighth article .messages-02 {
+#eighth div article .messages-02 {
   position: absolute;
-  bottom: 0;
+  bottom: 200px;
   right: 0;
   width: 125px;
   height: 75px;
 }
-#eighth article .messages-02 .message-short {
+#eighth div article .messages-02 .message-short {
   position: absolute;
   bottom: 0;
   width: 125px;
@@ -866,7 +916,7 @@ body {
   border-radius: 30px;
   font-size: 36px;
 }
-#eighth article .messages-02 .message-short span {
+#eighth div article .messages-02 .message-short span {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -874,13 +924,13 @@ body {
   background: #fff;
   animation: flow 1.5s linear infinite;
 }
-#eighth article .messages-02 .message-short span:nth-child(2) {
+#eighth div article .messages-02 .message-short span:nth-child(2) {
   animation-delay: 0.2s;
 }
-#eighth article .messages-02 .message-short span:nth-child(3) {
+#eighth div article .messages-02 .message-short span:nth-child(3) {
   animation-delay: 0.4s;
 }
-#eighth article .messages-02 .vector-bk {
+#eighth div article .messages-02 .vector-bk {
   position: absolute;
   bottom: 5px;
   right: -8px;

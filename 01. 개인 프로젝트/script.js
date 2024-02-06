@@ -14,6 +14,15 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// mouse cursor
+
+const cursor = document.querySelector(".cursor");
+console.log(cursor);
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
 // 스크롤
 // const observer = new IntersectionObserver((move) => {
 //   move.forEach((move) => {
@@ -47,7 +56,7 @@ function blink() {
 }
 setInterval(blink, 400);
 
-// 좋아요
+// 좋아요 heart
 like.addEventListener("click", () => {
   like.classList.toggle("active");
 });
