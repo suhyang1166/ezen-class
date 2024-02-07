@@ -2,15 +2,18 @@ const phone = document.querySelector(".hello-content");
 const move = document.querySelector(".text-ani");
 const gnb = document.querySelector("#main-bar");
 const like = document.querySelector(".like");
+const logo = document.querySelector("#logo");
 
-console.log(like);
+console.log(logo);
 
 // gnb 컬러 변경
 window.addEventListener("scroll", () => {
   if (window.scrollY > 680) {
     gnb.classList.add("active");
+    logo.classList.add("active");
   } else {
     gnb.classList.remove("active");
+    logo.classList.remove("active");
   }
 });
 
@@ -44,7 +47,7 @@ function textAni(randomArr) {
     move.textContent += randomArr.shift();
     setTimeout(function () {
       textAni(randomArr);
-    }, 500);
+    }, 300);
   }
 }
 

@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- js -->
-    <script defer src="./script.js"></script>
-    <!-- css -->
-    <link rel="stylesheet" href="./style01.css" />
+    <!-- 파비콘 -->
+    <link rel="icon" href="./img/ghiblilogo.png" />
     <!-- icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -17,50 +15,34 @@
       src="https://kit.fontawesome.com/7b09c8acb9.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <!-- custom -->
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style01.css" />
+    <title>Hyang's ♡</title>
   </head>
   <body>
-    <div class="cursor"></div>
-
     <!-- gnb/video page -->
     <section id="first">
       <div class="bg"></div>
       <nav id="main-bar">
         <div class="bar-list">
-          <a href="#third" data-text="PROFILE">PROFILE</a>
-          <a href="#fifth" data-text="CONTENTS">CONTENTS</a>
-          <a href="#ninth" data-text="GOAL">GOAL</a>
-          <a href="#tenth" data-text="PROJECT">PROJECT</a>
-          <a href="#eleventh" data-text="CONTACT">CONTACT</a>
+          <a id="logo" href="#"></a>
+          <div>
+            <a href="#third" data-text="PROFILE">PROFILE</a>
+            <a href="#fifth" data-text="CONTENTS">CONTENTS</a>
+            <a href="#ninth" data-text="GOAL">GOAL</a>
+            <a href="#tenth" data-text="PROJECT">PROJECT</a>
+            <a href="#eleventh" data-text="CONTACT">CONTACT</a>
+          </div>
         </div>
       </nav>
       <article id="contents-box">
         <a href="#second">
           <div class="video-type">
-            <video
-              src="./video/KakaoTalk_20240203_181428180.mp4"
-              autoplay
-              muted
-              loop
-            ></video>
-            <video
-              src="./video/KakaoTalk_20240203_182545174.mp4"
-              autoplay
-              muted
-              loop
-            ></video>
-            <video
-              src="./video/KakaoTalk_20240203_182710471.mp4"
-              autoplay
-              muted
-              loop
-            ></video>
-            <video
-              src="./video/KakaoTalk_20240203_183505494.mp4"
-              autoplay
-              muted
-              loop
-            ></video>
+            <video src="./video/v1.mp4" autoplay muted loop></video>
+            <video src="./video/v2.mp4" autoplay muted loop></video>
+            <video src="./video/v3.mp4" autoplay muted loop></video>
+            <video src="./video/v4.mp4" autoplay muted loop></video>
           </div>
         </a>
         <div class="gra-box">
@@ -145,6 +127,7 @@
         <a href="#sixth">
           <div class="outline">
             <div class="inner"></div>
+            <p class="more-me">"나"에 대해 더 궁금하신가요?</p>
           </div>
         </a>
         <div class="total">
@@ -163,13 +146,31 @@
         </div>
       </article>
       <article class="pics">
-        <div>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="pic-content">
+          <a href="" data-featherlight="iframe">
+            <img src="./img/in01.jpg" alt="in01" />
+            <p>지금의 "나"는?</p>
+          </a>
+          <a href="" data-featherlight="iframe">
+            <img src="./img/in02.jpg" alt="in02" />
+            <p>여가를 ♡하는 사람</p>
+          </a>
+          <a href="" data-featherlight="iframe">
+            <img src="./img/in03.jpg" alt="in03" />
+            <p>목표가 있는 사람</p>
+          </a>
+          <a href="" data-featherlight="iframe">
+            <img src="./img/in04.jpg" alt="in04" />
+            <p>건축 디자이너</p>
+          </a>
+          <a href="./index02.html" data-featherlight="iframe">
+            <img src="./img/in05.jpg" alt="in05" />
+            <p>메이크업 아티스트</p>
+          </a>
+          <a href="" data-featherlight="iframe">
+            <img src="./img/in06.jpg" alt="in06" />
+            <p>"나"를 소개합니다!</p>
+          </a>
         </div>
       </article>
       <article class="bottom-bar">
@@ -206,7 +207,7 @@
           </div>
           <article class="message-long">
             <div>
-              아하! <span>"나"</span>는 <br />그런 다양한 경험으로<br />무엇을
+              그럼 <span>"나"</span>는 <br />다양한 경험을 하며<br />무엇을
               배웠나요?
             </div>
           </article>
@@ -226,7 +227,40 @@
 
     <!-- 경험 페이지 -->
     <section id="seventh">
-      <a href="#eighth"></a>
+      <div class="container">
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>
+            <h2>No.1</h2>
+            <p>의미없는 경험은 없다.</p>
+          </div>
+        </div>
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>
+            <h2>No.2</h2>
+            <p>
+              나에게 노력이란?<br />열심히 하는 것이 아닌<br />잘하게 만드는 것
+            </p>
+          </div>
+        </div>
+        <div class="square">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>
+            <h2>No.3</h2>
+            <p>현재에 상황에서<br />최선의 결과를 내자</p>
+          </div>
+        </div>
+      </div>
+      <div class="click-me">
+        <a href="#eighth">Click me</a>
+      </div>
     </section>
 
     <!-- 말풍선 페이지 03 -->
@@ -302,5 +336,8 @@
         </ul>
       </div>
     </section>
+
+    <!-- cursor -->
+    <div class="cursor"></div>
   </body>
 </html>

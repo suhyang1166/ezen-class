@@ -48,6 +48,7 @@ body {
   transform: translate(-50%, -50%);
   pointer-events: none;
   mix-blend-mode: difference;
+  transition: all 0.05s;
   z-index: 110;
 }
 
@@ -83,23 +84,38 @@ body {
 }
 #first #main-bar .bar-list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 50px;
   gap: 3.125rem;
   width: 1280px;
   height: 100px;
 }
-#first #main-bar .bar-list a {
+#first #main-bar .bar-list #logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: url(./img/ghiblilogo.png) center/cover no-repeat;
+}
+#first #main-bar .bar-list #logo.active {
+  background: url(./img/ghiblilogo2.png) center/cover no-repeat;
+}
+#first #main-bar .bar-list div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+#first #main-bar .bar-list div a {
   position: relative;
   font-family: GM M;
   font-size: 18px;
   cursor: pointer;
 }
-#first #main-bar .bar-list a:hover {
+#first #main-bar .bar-list div a:hover {
   color: #999;
 }
-#first #main-bar .bar-list a::before {
+#first #main-bar .bar-list div a::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -112,7 +128,7 @@ body {
   transition: all 0.5s;
   overflow: hidden;
 }
-#first #main-bar .bar-list a:hover::before {
+#first #main-bar .bar-list div a:hover::before {
   width: 100%;
 }
 #first #main-bar.active {
@@ -137,7 +153,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  z-index: 300;
 }
 #first #contents-box .video-type video {
   width: 250px;
@@ -238,6 +253,7 @@ body {
   border-radius: 60px;
   position: relative;
   z-index: 500;
+  transition: all 0.3s;
 }
 #third .hello-content .phone-box div {
   position: absolute;
@@ -250,6 +266,9 @@ body {
   background: url(./img/sh2.jpg) center/cover no-repeat;
   border-radius: 60px;
   z-index: 300;
+}
+#third .hello-content .phone-box:hover {
+  transform: scale(0.9);
 }
 #third .hello-content .my-content {
   position: absolute;
@@ -365,6 +384,7 @@ body {
   height: 75px;
   animation-delay: 18s;
   animation: message 6s linear;
+  transition: all 0.3s;
 }
 #fourth .messages-02 .message-short {
   position: absolute;
@@ -396,6 +416,9 @@ body {
   bottom: 5px;
   right: -8px;
   transform: rotateY(-180deg);
+}
+#fourth .messages-02:hover {
+  transform: scale(0.9);
 }
 
 @keyframes flow {
@@ -439,13 +462,17 @@ body {
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
 }
+#fifth .heading a {
+  transition: all 0.3s;
+}
 #fifth .heading a .outline {
+  position: relative;
   width: 260px;
   height: 260px;
   border: 5px solid transparent;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(-140deg, #634edd, #eb3b9b, #fe4743, #fed06a) border-box;
   border-radius: 100%;
-  position: relative;
+  animation: line 0.3s linear infinite;
 }
 #fifth .heading a .outline .inner {
   position: absolute;
@@ -454,10 +481,32 @@ body {
   transform: translate(-50%, -50%);
   width: 230px;
   height: 230px;
-  background: url(./img/sh.png) center/cover no-repeat;
   border-radius: 100%;
+  background: url(./img/sh.png) center/cover no-repeat;
+}
+#fifth .heading a .outline .more-me {
+  position: absolute;
+  top: 14.41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 235px;
+  height: 235px;
+  line-height: 230px;
+  border-radius: 100%;
+  margin-top: 90px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.3s;
+}
+#fifth .heading a .outline .more-me:hover {
+  opacity: 1;
+}
+#fifth .heading a:hover {
+  transform: scale(0.9);
 }
 #fifth .heading .total {
+  z-index: 300;
   width: 500px;
   height: 255px;
   display: grid;
@@ -527,7 +576,7 @@ body {
   height: 630px;
   margin-top: 45px;
 }
-#fifth .pics div {
+#fifth .pics .pic-content {
   display: grid;
   justify-content: space-between;
   align-items: center;
@@ -535,7 +584,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-#fifth .pics div span {
+#fifth .pics .pic-content a {
   width: 270px;
   height: 270px;
   cursor: pointer;
@@ -543,27 +592,39 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
 }
-#fifth .pics div span:nth-child(1) {
-  background: url(./img/last.jpg) center/cover no-repeat;
+#fifth .pics .pic-content a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 10;
 }
-#fifth .pics div span:nth-child(2) {
-  background: url(./img/aa.jpg) center/cover no-repeat;
+#fifth .pics .pic-content a p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 270px;
+  text-align: center;
+  letter-spacing: 5px;
+  font: 20px/270px "gm L";
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s;
 }
-#fifth .pics div span:nth-child(3) {
-  background: url(./img/mon.jpg) center/cover no-repeat;
+#fifth .pics .pic-content a p:hover {
+  opacity: 1;
 }
-#fifth .pics div span:nth-child(4) {
-  background: url(./img/busan.jpg) center/cover no-repeat;
-}
-#fifth .pics div span:nth-child(5) {
-  background: url(./img/color.jpg) center/cover no-repeat;
-}
-#fifth .pics div span:nth-child(6) {
-  background: url(./img/jeju.jpg) center/cover no-repeat;
-}
-#fifth .pics div span:hover {
-  opacity: 0.5;
+#fifth .pics .pic-content a:hover {
+  opacity: 1;
   transform: scale(1.1);
 }
 #fifth .bottom-bar {
@@ -585,11 +646,15 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
 }
 #fifth .bottom-bar ul li:nth-child(3) span {
   font-size: 50px;
   border: 3px solid #fff;
   border-radius: 15px;
+}
+#fifth .bottom-bar ul li:nth-child(4):hover {
+  transform: scale(1.1);
 }
 #fifth .bottom-bar ul li:nth-child(4)::before {
   content: "\f08a";
@@ -602,6 +667,7 @@ body {
   content: "\f004";
   text-shadow: 0 0 20px #f00;
   color: #f00;
+  transform: scale(1.3);
 }
 #fifth .bottom-bar ul li:last-child {
   display: grid;
@@ -717,6 +783,7 @@ body {
   height: 75px;
   animation-delay: 18s;
   animation: message 6s linear;
+  transition: all 0.3s;
 }
 #sixth .messages-02 .message-short {
   position: absolute;
@@ -749,7 +816,108 @@ body {
   right: -8px;
   transform: rotateY(-180deg);
 }
+#sixth .messages-02:hover {
+  transform: scale(0.9);
+}
 
+/* 경험 페이지 */
+#seventh {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#seventh .container {
+  width: 1280px;
+  height: 350px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 150px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 300px;
+}
+#seventh .container .square {
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+#seventh .container .square div {
+  border: 1px so;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+}
+#seventh .container .square div h2 {
+  margin-bottom: 30px;
+}
+#seventh .container .square span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(-140deg, #634edd, #eb3b9b, #fe4743, #fed06a) border-box;
+  border-radius: 40% 60% 65% 35%/40% 45% 55% 60%;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+#seventh .container .square span:nth-child(1) {
+  animation: circle 6s linear infinite;
+}
+#seventh .container .square span:nth-child(2) {
+  animation: circle 4s linear infinite;
+  animation-direction: reverse;
+}
+#seventh .container .square span:nth-child(3) {
+  animation: circle 10s linear infinite;
+}
+#seventh .container .square:nth-child(1):hover span {
+  background: pink;
+  border: none;
+}
+#seventh .container .square:nth-child(2):hover span {
+  background: palevioletred;
+  border: none;
+}
+#seventh .container .square:nth-child(3):hover span {
+  background: #eb3b9b;
+  border: none;
+}
+#seventh .click-me {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+#seventh .click-me a {
+  width: 100px;
+  display: inline-block;
+  padding: 8px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 40% 60% 65% 35%/40% 45% 55% 60%;
+  transition: all 0.3s;
+}
+#seventh .click-me a:hover {
+  transform: scale(0.9);
+  font-family: gm B;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* 말풍선 페이지 03 */
 #eighth {
   width: 100%;
