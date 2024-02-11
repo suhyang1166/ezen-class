@@ -34,7 +34,7 @@ a {
   justify-content: center;
   align-items: center;
   font-family: gm M;
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
   box-shadow: 0 0 30px rgba(149, 149, 149, 0.4);
 }
@@ -63,7 +63,8 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
-  font-size: 70px;
+  font-size: 40px;
+  padding-left: 30px;
 }
 #wrap h1 span {
   font-family: gm B;
@@ -107,6 +108,18 @@ body {
 #wrap #slide .main-contents div:nth-child(8) {
   background: linear-gradient(135deg, #eead92, #6018dc);
 }
+#wrap #slide .main-contents div:nth-child(9) {
+  background: linear-gradient(135deg, #fff6b7, #f6416c);
+}
+#wrap #slide .main-contents div:nth-child(10) {
+  background: linear-gradient(135deg, #72edf2, #5151e5);
+}
+#wrap #slide .main-contents div:nth-child(11) {
+  background: linear-gradient(135deg, #f0ff00, #58cffb);
+}
+#wrap #slide .main-contents div:nth-child(12) {
+  background: linear-gradient(135deg, #eead92, #6018dc);
+}
 
 @keyframes flow {
   0% {
@@ -128,8 +141,9 @@ body {
     align-items: center;
   }
   #wrap h1 {
-    width: 180px;
+    width: 190px;
     font-size: 30px;
+    gap: 20px;
   }
   #wrap h1 span {
     font-size: 100px;
@@ -148,7 +162,7 @@ body {
     width: 300px;
     height: 250px;
     text-align: center;
-    font-size: 32px;
+    font-size: 30px;
     padding: 10px;
     margin: 30px;
   }
@@ -170,7 +184,7 @@ body {
     text-align: center;
     position: relative;
     gap: 0;
-    font-size: 30px;
+    font-size: 28px;
   }
   #wrap h1 span {
     transform: rotate(90deg);
