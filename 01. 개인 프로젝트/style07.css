@@ -153,10 +153,10 @@ body {
   font-family: gm M;
 }
 #selfintro .pics .text-content .like-text::before {
-  content: "좋아요 329개";
+  content: "좋아요 54개";
 }
 #selfintro .pics .text-content .like-text.active::before {
-  content: "좋아요 330개";
+  content: "좋아요 55개";
 }
 #selfintro .pics .text-content div {
   font-size: 22px;
@@ -190,15 +190,105 @@ body {
   width: 600px;
   margin-bottom: 20px;
 }
-#selfintro .pics .text-content p {
+#selfintro .pics .text-content .text-up {
   font-size: 22px;
   font-family: gm L;
-  margin-top: 30px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+#selfintro .pics .text-content .text-up.active {
+  display: none;
+}
+#selfintro .pics .text-content #container {
+  width: 900px;
+  display: grid;
+  justify-content: flex-start;
+  align-items: start;
+  grid-template-columns: repeat(1, 1fr);
+  display: none;
+}
+#selfintro .pics .text-content #container p {
+  font-family: gm L;
+  font-size: 24px;
+}
+#selfintro .pics .text-content #container form #bookInfo {
+  margin-top: 10px;
+  color: #fff;
+}
+#selfintro .pics .text-content #container form #bookInfo li {
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family: gm L;
+}
+#selfintro .pics .text-content #container form #bookInfo li label {
+  display: inline-block;
+  width: 70px;
+}
+#selfintro .pics .text-content #container form #bookInfo li input {
+  display: inline-block;
+  width: 380px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  color: #fff;
+}
+#selfintro .pics .text-content #container form #bookInfo li input:focus {
+  color: #fff;
+  outline: none;
+}
+#selfintro .pics .text-content #container form #reset,
+#selfintro .pics .text-content #container form #save {
+  display: inline-block;
+  font-family: gm B;
+  width: 80px;
+  padding: 5px 10px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#selfintro .pics .text-content #container form #reset:hover,
+#selfintro .pics .text-content #container form #save:hover {
+  background: #fff;
+  color: #000;
+}
+#selfintro .pics .text-content #container #booklist {
+  width: 900px;
+  margin-top: 20px;
+  position: relative;
+}
+#selfintro .pics .text-content #container #booklist li {
+  width: 800px;
+  height: 100%;
+  margin-bottom: 10px;
+}
+#selfintro .pics .text-content #container #booklist li .delButton {
+  cursor: pointer;
+  position: absolute;
+  right: 7px;
+  font-family: gm B;
+  width: 80px;
+  padding: 5px 10px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 3px;
+}
+#selfintro .pics .text-content #container #booklist li .delButton:hover {
+  background: #fff;
+  color: #000;
+}
+#selfintro .pics .text-content #container.active {
+  display: block;
 }
 #selfintro .pics .text-content p span {
   font-family: gm M;
   line-height: 50px;
   font-size: 18px;
+  margin-top: 30px;
 }
 #selfintro .pics .bottom-bar {
   width: 900px;
@@ -268,4 +358,4 @@ body {
 }
 #selfintro .pics .bottom-bar ul li span {
   font-size: 60px;
-}/*# sourceMappingURL=style06.css.map */
+}/*# sourceMappingURL=style07.css.map */

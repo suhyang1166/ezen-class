@@ -20,8 +20,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- custom -->
-    <link rel="stylesheet" href="./style06.css" />
-    <script defer src="./script01.js"></script>
+    <link rel="stylesheet" href="./style07.css" />
+    <script defer src="./script02.js"></script>
     <title>Hyang's ♡</title>
   </head>
   <body>
@@ -45,17 +45,35 @@
           <p class="like-text"></p>
           <div>
             <p>SUHYANG.KIM</p>
-            <p class="shortText">안녕하세요😊 저는</p>
+            <p class="shortText">
+              현재는 공부-ing로 열심히 머리를 깨보고 있어요
+            </p>
             <p class="plus">더보기</p>
             <p class="hide-content">
-              안녕하세요😊 저는 제주도에서 왔어요!<br />birth : 1997.10.06
-              <br />MBTI : INFJ <br />hobby : 카페투어, 여행, 걷기 <br />.
-              <br />. <br />. <br />대체적으로 정적인걸 좋아해요<br />낯을 조금
-              가리는 편이라 대화할 때 버퍼링이 걸려요..🥲<br />조금만
-              기다려주세요,,<br />. <br />. <br />.<br />하트를 눌러보세요🙌🙌🙌
+              현재는 공부-ing로 열심히 머리를 깨보고 있어요<br />저희 모두
+              힘내보아요<br />앞으로 6월까지 잘부탁드려요><
             </p>
           </div>
-          <p>댓글 127개 모두 보기<br /><span>1997년 10월 06일</span></p>
+          <p class="text-up">댓글 모두 보기</p>
+          <div id="container">
+            <p>메세지를 남겨주세요!😍</p>
+            <form action="http://localhost:3000/register" method="post">
+              <ul id="bookInfo">
+                <li>
+                  <label for="title">Name</label>
+                  <input id="title" type="text" />
+                </li>
+                <li>
+                  <label for="author">T e x t</label>
+                  <input id="author" type="text" />
+                </li>
+              </ul>
+              <input id="reset" type="reset" value="취소" />
+              <input id="save" type="submit" value="올리기" />
+            </form>
+            <ul id="booklist"></ul>
+          </div>
+          <p><span>방금 전</span></p>
         </div>
         <article class="bottom-bar">
           <ul>

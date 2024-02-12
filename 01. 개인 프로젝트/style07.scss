@@ -150,10 +150,10 @@ body {
           family: gm M;
         }
         &::before {
-          content: "좋아요 329개";
+          content: "좋아요 54개";
         }
         &.active::before {
-          content: "좋아요 330개";
+          content: "좋아요 55개";
         }
       }
       div {
@@ -190,16 +190,113 @@ body {
           margin-bottom: 20px;
         }
       }
-      p {
+      .text-up {
         font: {
           size: 22px;
           family: gm L;
         }
-        margin-top: 30px;
+        margin-top: 40px;
+        cursor: pointer;
+        &.active {
+          display: none;
+        }
+      }
+      #container {
+        width: 900px;
+        display: grid;
+        justify-content: flex-start;
+        align-items: start;
+        grid-template-columns: repeat(1, 1fr);
+        display: none;
+        p {
+          font: {
+            family: gm L;
+            size: 24px;
+          }
+        }
+        form {
+          #bookInfo {
+            margin-top: 10px;
+            color: #fff;
+            li {
+              padding-bottom: 20px;
+              font: {
+                size: 20px;
+                family: gm L;
+              }
+              label {
+                display: inline-block;
+                width: 70px;
+              }
+              input {
+                display: inline-block;
+                width: 380px;
+                padding: 5px;
+                border: none;
+                border-bottom: 1px solid #ddd;
+                background: transparent;
+                color: #fff;
+                &:focus {
+                  color: #fff;
+                  outline: none;
+                }
+              }
+            }
+          }
+          #reset,
+          #save {
+            display: inline-block;
+            font-family: gm B;
+            width: 80px;
+            padding: 5px 10px;
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+              background: #fff;
+              color: #000;
+            }
+          }
+        }
+        #booklist {
+          width: 900px;
+          margin-top: 20px;
+          position: relative;
+          li {
+            width: 800px;
+            height: 100%;
+            margin-bottom: 10px;
+            .delButton {
+              cursor: pointer;
+              position: absolute;
+              right: 7px;
+              font-family: gm B;
+              width: 80px;
+              padding: 5px 10px;
+              background: #000;
+              color: #fff;
+              border: 1px solid #fff;
+              border-radius: 10px;
+              margin: 3px;
+              &:hover {
+                background: #fff;
+                color: #000;
+              }
+            }
+          }
+        }
+        &.active {
+          display: block;
+        }
+      }
+      p {
         span {
           font-family: gm M;
           line-height: 50px;
           font-size: 18px;
+          margin-top: 30px;
         }
       }
     }
