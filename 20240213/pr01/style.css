@@ -44,6 +44,40 @@ body {
   overflow: hidden;
 }
 
+/* ##### Header ##### */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gnb-inner {
+  width: calc(100%-40px);
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  padding-top: 17px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.slogan {
+  font-size: 16px;
+  font-style: italic;
+}
+.trigger {
+  display: none;
+}
+
 /* ##### Section : Home ##### */
 .home-inner {
   background: #fff;
@@ -110,7 +144,7 @@ body {
   }
 }
 .opacity-image {
-  background: url(./images/section-bg-01.jpg) center/cover no-repeat;
+  background: url("./images/section-bg-01.jpg") center/cover no-repeat;
   height: 100%;
   opacity: 0;
   animation: opacity-image 1s 2.5s ease-in;
@@ -156,9 +190,10 @@ body {
     width: 100%;
   }
 }
+
 /* ##### Section : About ##### */
 .about-inner {
-  background: #0dace3 url(./images/line-drawing.png) no-repeat right bottom;
+  background: #0dace3 url("./images/line-drawing.png") no-repeat right bottom;
   height: 100%;
 }
 .about-items {
@@ -171,8 +206,8 @@ body {
   margin-left: 150px;
 }
 .item {
-  margin-bottom: 50px;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 .item img {
   filter: invert(1);
