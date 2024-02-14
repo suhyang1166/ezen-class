@@ -197,4 +197,35 @@
   .victory-jump {
     text-align: center;
   }
+
+  /* location */
+  .location-inner {
+    height: auto;
+  }
+  .feature {
+    width: 100%;
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+  .feature > div {
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* contact */
+  .contact-inner {
+    height: auto;
+  }
+  .contact-feature {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .contact-feature > div {
+    float: none;
+    width: 100%;
+  }
 }

@@ -60,3 +60,12 @@ $(".menu a").click(function () {
 $(".menu a").click(function () {
   $.scrollTo(this.hash || 0, 900);
 });
+
+// header scroll event
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 50) {
+    $("header").addClass("active");
+  } else {
+    $("header").removeClass("active");
+  }
+});
