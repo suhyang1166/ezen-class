@@ -2,6 +2,10 @@
   font-family: "notosans";
   src: url(./font/Noto\ Sans\ KR);
 }
+@font-face {
+  font-family: noto R;
+  src: url(./font/Noto\ Sans\ KR/);
+}
 /* reset */
 * {
   margin: 0;

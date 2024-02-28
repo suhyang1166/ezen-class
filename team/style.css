@@ -83,5 +83,76 @@
   position: absolute;
   bottom: 60px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0;
+}
+.mouse_bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1px;
+  height: 41px;
+  background: #fff;
+}
+
+/* select-coffee */
+#select-coffee {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+.select-button-page {
+  border: 1px solid #f00;
+  position: relative;
+  width: calc(100% / 2);
+  height: 100vh;
+  background: url(./img/s_img/c-signature-bg-1.jpg) center/cover no-repeat;
+}
+.select-button {
+  border: 1px solid #0f0;
+  color: #fff;
+  position: absolute;
+  top: 8rem;
+  left: 8rem;
+}
+.select-button h1 {
+  font: 700 8rem/1 "notosans";
+  margin-bottom: 0.5em;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.buttons button {
+  padding-bottom: 2px;
+  font: 700 2.4rem/1 "notosans";
+  border: none;
+  color: #fff;
+  background: none;
+}
+.select-signature-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+}
+.select-signature-img img {
+  width: 100%;
+}
+.select-menu-detail {
+  border: 1px solid #00f;
+  width: 50%;
+  height: 100vh;
 }
