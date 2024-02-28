@@ -1,10 +1,11 @@
 @font-face {
   font-family: "notosans";
-  src: url(./font/Noto\ Sans\ KR);
+  src: url(./font/NotoSansKR/);
 }
+
 @font-face {
-  font-family: noto R;
-  src: url(./font/Noto\ Sans\ KR/);
+  font-family: "SF";
+  src: url(./font/SFUIDisplay/);
 }
 /* reset */
 * {

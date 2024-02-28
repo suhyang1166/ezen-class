@@ -5,6 +5,8 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  font-size: 10px;
+  background-color: #f7f6f3;
 }
 
 /* main image page */
@@ -110,23 +112,24 @@
   align-items: center;
   font-size: 10px;
 }
+/* left */
 .select-button-page {
-  border: 1px solid #f00;
   position: relative;
   width: calc(100% / 2);
   height: 100vh;
   background: url(./img/s_img/c-signature-bg-1.jpg) center/cover no-repeat;
 }
 .select-button {
-  border: 1px solid #0f0;
   color: #fff;
   position: absolute;
-  top: 8rem;
-  left: 8rem;
+  /* top: 8rem;
+  left: 8rem; */
+  top: 80px;
+  left: 80px;
 }
 .select-button h1 {
-  font: 700 8rem/1 "notosans";
-  margin-bottom: 0.5em;
+  font: 700 80px/1 "SF";
+  margin-bottom: 40px;
 }
 .buttons {
   display: flex;
@@ -135,24 +138,122 @@
   align-items: flex-start;
 }
 .buttons button {
-  padding-bottom: 2px;
-  font: 700 2.4rem/1 "notosans";
+  font: 400 24px/1 "SF";
   border: none;
   color: #fff;
   background: none;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
+button.active {
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 3px solid #fff;
+  font-weight: 700;
+}
+/* center */
 .select-signature-img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 440px;
+  margin: 50px 0;
 }
 .select-signature-img img {
   width: 100%;
 }
-.select-menu-detail {
-  border: 1px solid #00f;
-  width: 50%;
+/* right */
+.select-menu {
+  width: calc(100% / 2);
   height: 100vh;
+}
+.select-menu-detail {
+  /* border: 1px solid #f00; */
+  width: 650px;
+  margin-left: auto;
+  margin-right: 60px;
+  height: 100%;
+}
+.menu-text {
+  padding-top: 120px;
+}
+.menu-text h1 {
+  font-family: "SF";
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.menu-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.menu-img {
+  height: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.menu-img img {
+  width: calc(100% / 3);
+  height: 100%;
+}
+.menu-topping {
+}
+.topping-title {
+  width: 100%;
+  border-bottom: 1px solid #ff4713;
+}
+.topping-title h1 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 11px;
+}
+.topping-wrap {
+  margin-top: 30px;
+  display: flex;
+}
+.topping-detail {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+.topping-detail img {
+  display: block;
+  width: 70px;
+  margin: 0 auto;
+}
+.topping-detail p {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+/* my coffee */
+#my-coffee {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ff4713;
+}
+#my-coffee section {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.my-coffee-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-coffee-text img {
+  display: block;
+  margin: 160px 0;
+}
+.my-coffee-img {
+  width: 100%;
+  height: auto;
+}
+.my-coffee-img img {
+  width: 100%;
+  object-fit: cover;
 }
