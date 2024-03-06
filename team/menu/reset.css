@@ -24,6 +24,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 body {
   font: 500 10px/1 "Noto Sans KR", sans-serif;
