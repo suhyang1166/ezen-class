@@ -127,7 +127,7 @@
   position: relative;
   width: calc(100% / 2);
   height: 100vh;
-  background: url(./img/s_img/c-signature-bg-1.jpg) center/cover no-repeat;
+  background: url(./img/s_img/main-select-bg-1.jpg) center/cover no-repeat;
 }
 .select_button {
   color: #fff;
