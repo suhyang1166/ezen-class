@@ -14,32 +14,36 @@
     <div id="wrap">
       <article id="main_page">
         <div class="scroll_img">
-          <img
+          <!-- <img
             class="main_img_pc"
             src="./img/s_img/main-desk-01.jpg"
             alt="main01"
-          />
+          /> -->
           <img
             class="main_img_mo"
             src="./img/s_img/small-main.jpg"
             alt="main-m01"
           />
+          <div class="arrows">
+            <span id="left" class="arrow"></span>
+            <span id="right" class="arrow"></span>
+          </div>
         </div>
         <div class="popup_all">
-          <section class="popup">
-            <a class="pop_img" href="#">
+          <section class="popup pop01">
+            <a class="pop_img pop_link01" href="#">
               <img src="./img/s_img/pop-main1.png" alt="popup01" />
             </a>
-            <div class="pop_close">
+            <div class="pop_close popclose01">
               <p>오늘 하루 창 열지 않기</p>
               <p>닫기</p>
             </div>
           </section>
-          <section class="popup">
-            <a class="pop_img" href="#">
+          <section class="popup pop02">
+            <a class="pop_img pop_link02" href="#">
               <img src="./img/s_img/pop-main2.png" alt="popup02" />
             </a>
-            <div class="pop_close">
+            <div class="pop_close popclose02">
               <p>오늘 하루 창 열지 않기</p>
               <p>닫기</p>
             </div>
@@ -80,18 +84,45 @@
       </article>
       <article id="select_coffee">
         <section class="select_button_page">
+          <div class="left_img">
+            <img
+              src="./img/s_img/main-select-bg-1.jpg"
+              alt="bg01"
+              data-index="1"
+            />
+            <img
+              src="./img/s_img/main-select-bg-2.jpg"
+              alt="bg02"
+              data-index="2"
+            />
+            <img
+              src="./img/s_img/main-select-bg-3.jpg"
+              alt="bg03"
+              data-index="3"
+            />
+            <img
+              src="./img/s_img/main-select-bg-4.jpg"
+              alt="bg04"
+              data-index="4"
+            />
+          </div>
           <div class="select_button">
             <h1>SELECTO MENU</h1>
             <div class="buttons">
-              <button class="active">SIGNATURE</button>
-              <button>BEVERAGE</button>
-              <button>COFFEE</button>
-              <button>COOKIE</button>
+              <button class="active" id="SIGNATURE" data-index="1">
+                SIGNATURE
+              </button>
+              <button id="BEVERAGE" data-index="2">BEVERAGE</button>
+              <button id="COFFEE" data-index="3">COFFEE</button>
+              <button id="COOKIE" data-index="4">COOKIE</button>
             </div>
           </div>
         </section>
         <section class="select_signature_img">
           <img src="./img/s_img/main-select-item-1-1.png" alt="item00" />
+          <img src="./img/s_img/main-select-item-2-1.png" alt="item00" />
+          <img src="./img/s_img/main-select-item-3-1.png" alt="item00" />
+          <img src="./img/s_img/main-select-item-4-1.png" alt="item00" />
         </section>
         <section class="select_menu">
           <article class="select_menu_detail">
@@ -239,9 +270,9 @@
           <p>selecto_coffee</p>
         </div>
         <div class="sns_imgs">
-          <img src="./img/s_img/sns-img01.jpg" alt="sns01" />
-          <img src="./img/s_img/sns-img02.jpg" alt="sns02" />
-          <img src="./img/s_img/sns-img03.jpg" alt="sns03" />
+          <img class="sns_link01" src="./img/s_img/sns-img01.jpg" alt="sns01" />
+          <img class="sns_link02" src="./img/s_img/sns-img02.jpg" alt="sns02" />
+          <img class="sns_link03" src="./img/s_img/sns-img03.jpg" alt="sns03" />
         </div>
       </article>
     </div>

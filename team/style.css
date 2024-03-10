@@ -127,7 +127,29 @@
   position: relative;
   width: calc(100% / 2);
   height: 100vh;
-  background: url(./img/s_img/main-select-bg-1.jpg) center/cover no-repeat;
+}
+.select_button_page img:nth-child(1) {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.select_button_page img:nth-child(2) {
+  display: none;
+}
+.select_button_page img:nth-child(3) {
+  display: none;
+}
+.select_button_page img:nth-child(4) {
+  display: none;
+}
+.select_button_page img.active {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .select_button {
   color: #fff;
@@ -171,7 +193,19 @@ button.active {
   height: 100%;
   margin: 50px 0;
 }
-.select_signature_img img {
+.select_signature_img img:nth-child(1) {
+  width: 100%;
+}
+.select_signature_img img:nth-child(2) {
+  display: none;
+  width: 100%;
+}
+.select_signature_img img:nth-child(3) {
+  display: none;
+  width: 100%;
+}
+.select_signature_img img:nth-child(4) {
+  display: none;
   width: 100%;
 }
 /* right */
