@@ -940,10 +940,10 @@ button.active {
     border-bottom: 3px solid #fff;
     font-weight: 700;
   }
-  .buttons button {
+  /* .buttons button {
     font: 400 16px/1 "SF400";
     margin: 0 10px;
-  }
+  } */
   /* right */
   .menu_text {
     padding-top: 60px;
