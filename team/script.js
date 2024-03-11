@@ -85,68 +85,36 @@ autoSlide();
 
 // selecto menu click event
 // const leftImgs = document.querySelectorAll(".left_img > img");
-const centerImgs = document.querySelectorAll(".select_signature_img > img");
 const buttons = document.querySelectorAll(".buttons > button");
 console.log(buttons);
-
-// let currentImageIndex = 0;
-
-// const showImage = (index) => {
-//   console.log(index);
-//   leftImgs[currentImageIndex].style.display = "none";
-//   leftImgs[index].style.display = "block";
-//   leftImgs[index].style.width = "100%";
-//   currentImageIndex = index;
-// };
-
-// buttons.forEach((button, index) => {
-//   button.addEventListener("click", () => {
-//     showImage(index);
-//   });
-// });
-
-// showImage(0);
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const btnIndex = button.dataset.index;
-    console.log(btnIndex);
-    const leftImgs = document.querySelector(`img[data-index="${btnIndex}"]`);
-    console.log(leftImgs);
-    leftImgs.classList.toggle("active");
-    button.classList.toggle("active");
-    // if (leftImgs) {
-    //   // centerImgs.classList.toggle("active");
-    // }
+    const leftImgs = document.querySelectorAll(".left_img > img");
+    const centerImgs = document.querySelectorAll(".select_signature_img > img");
+    const rightTit = document.querySelectorAll(".menu_text > h1");
+    const rightText = document.querySelectorAll(".menu_text > p");
+    const rightMenu = document.querySelectorAll(".menu_img");
+    const topping = document.querySelectorAll(".topping_wrap");
+    for (let i = 0; i < leftImgs.length; i++) {
+      buttons[i].classList.remove("active");
+      leftImgs[i].classList.remove("active");
+      centerImgs[i].classList.remove("active");
+      rightTit[i].classList.remove("active");
+      rightText[i].classList.remove("active");
+      rightMenu[i].classList.remove("active");
+      topping[i].classList.remove("active");
+    }
+    button.classList.add("active");
+    leftImgs[btnIndex].classList.add("active");
+    centerImgs[btnIndex].classList.add("active");
+    rightTit[btnIndex].classList.add("active");
+    rightText[btnIndex].classList.add("active");
+    rightMenu[btnIndex].classList.add("active");
+    topping[btnIndex].classList.add("active");
   });
 });
-
-// const buttons = document.querySelector(".buttons");
-// const xhr = new XMLHttpRequest();
-
-// xhr.open("GET", "items.json", true);
-// xhr.send();
-// console.log(xhr);
-
-// const changeItems = (items) => {
-//   const title = items.target.dataset.index;
-//   let output = "";
-//   items.forEach((item) => {
-//     if (title === item.title) {
-//       output += `<h2>asdsadsa</h2>`;
-//     }
-//   });
-// };
-
-// buttons.addEventListener("click", changeItems);
-
-// xhr.onreadystatechange = function () {
-//   if (xhr.readyState === 4 && xhr.status === 200) {
-//     const items = JSON.parse(xhr.responseText);
-//     console.log(items);
-//     changeItems(items);
-//   }
-// };
 
 // sns link
 const snsLink01 = document.querySelector(".sns_link01");
