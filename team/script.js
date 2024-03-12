@@ -37,70 +37,75 @@ popLink02.addEventListener("click", () => {
 // image slide
 const sliderWrapper = document.querySelector(".scroll_img");
 const sliderContainer = document.querySelector(".slide_pc");
-const sliderContainerMo = document.querySelector(".slide_mo");
 const slides = document.querySelectorAll(".slide_pc > img");
+const sliderContainerMo = document.querySelector(".slide_mo");
 const slidesMo = document.querySelectorAll(".slide_mo > img");
-console.log(slides);
 
 const navPrev = document.querySelector("#left");
 const navNext = document.querySelector("#right");
 
+const slideWidth = 100;
 const slideCount = slides.length;
-// slide count
-for (let i = 0; i < slideCount; i++) {
-  slides[i].style.left = `${i * 100}%`;
-  slidesMo[i].style.left = `${i * 100}%`;
-}
 
+let currentIdx = 0;
+// slide clone
 const makeClone = () => {
   for (let i = 0; i < slideCount; i++) {
     slides[i].style.left = `${i * 100}%`;
+    slidesMo[i].style.left = `${i * 100}%`;
     const cloneSlide = slides[i].cloneNode(true);
+    const cloneSlideMo = slidesMo[i].cloneNode(true);
     cloneSlide.classList.add("clone");
+    cloneSlideMo.classList.add("clone");
     sliderContainer.appendChild(cloneSlide);
+    sliderContainerMo.appendChild(cloneSlideMo);
   }
-  for (let i = slideCount - 1; i >= 0; i--) {
-    slides[i].style.left = `${i * 100}%`;
-    const cloneSlide = slides[i].cloneNode(true);
-    cloneSlide.classList.add("clone");
-    sliderContainer.prepend(cloneSlide);
-  }
+
+  setTimeout(() => {
+    sliderContainer.classList.add("animated");
+    sliderContainerMo.classList.add("animated");
+  }, 100);
 };
 
 makeClone();
 
-// slide width
-
-let currentIndex = 0;
-
-const gotoSlide = (i) => {
-  sliderContainer.style.left = `${i * -100}%`;
-  sliderContainerMo.style.left = `${i * -100}%`;
-  sliderContainer.classList.add("animated");
-  sliderContainerMo.classList.add("animated");
-  currentIndex = i;
+const moveSlide = (num) => {
+  sliderContainer.style.left = `${-num * slideWidth}%`;
+  sliderContainerMo.style.left = `${-num * slideWidth}%`;
+  currentIdx = num;
+  if (currentIdx === slideCount || currentIdx === -slideCount) {
+    setTimeout(() => {
+      sliderContainer.classList.remove("animated");
+      sliderContainer.style.left = "0px";
+      sliderContainerMo.classList.remove("animated");
+      sliderContainerMo.style.left = "0px";
+      currentIdx = 0;
+    }, 500);
+    setTimeout(() => {
+      sliderContainer.classList.add("animated");
+      sliderContainerMo.classList.add("animated");
+    }, 600);
+  }
 };
 
-gotoSlide(0);
-
-// auto slide function
-
-const startAutoSlide = () => {
+// auto slide
+const autoSlide = () => {
   timer = setInterval(() => {
-    const nextIdx = (currentIndex + 1) % slideCount;
-    gotoSlide(nextIdx);
+    moveSlide(currentIdx + 1);
   }, 3000);
 };
 
-startAutoSlide();
+autoSlide();
 
-sliderWrapper.addEventListener("mouseenter", () => {
+const stopSlide = () => {
   clearInterval(timer);
-});
+};
 
-sliderWrapper.addEventListener("mouseleave", () => {
-  startAutoSlide();
-});
+sliderContainer.addEventListener("mouseenter", stopSlide);
+sliderContainerMo.addEventListener("mouseenter", stopSlide);
+
+sliderContainer.addEventListener("mouseleave", autoSlide);
+sliderContainerMo.addEventListener("mouseleave", autoSlide);
 
 // selecto menu click event
 const buttons = document.querySelectorAll(".buttons > button");
