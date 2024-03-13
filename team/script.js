@@ -36,10 +36,11 @@ popLink02.addEventListener("click", () => {
 
 // image slide
 const sliderWrapper = document.querySelector(".scroll_img");
-const sliderContainer = document.querySelector(".slide_pc");
-const slides = document.querySelectorAll(".slide_pc > img");
+const sliderContainer = document.querySelector(".slide_pc ");
+const slides = document.querySelectorAll(".main_img_pc");
+const slidesImg = document.querySelectorAll(".main_img_pc > img");
 const sliderContainerMo = document.querySelector(".slide_mo");
-const slidesMo = document.querySelectorAll(".slide_mo > img");
+const slidesMo = document.querySelectorAll(".main_img_mo");
 
 const navPrev = document.querySelector("#left");
 const navNext = document.querySelector("#right");
@@ -48,6 +49,19 @@ const slideWidth = 100;
 const slideCount = slides.length;
 
 let currentIdx = 0;
+
+// li style setting
+const updateWidth = () => {
+  const currentSlides = document.querySelectorAll(".main_img_pc");
+  const currentSlidesMo = document.querySelectorAll(".main_img_mo");
+  const newSlideCount = currentSlides.length;
+  const newSlideCountMo = currentSlidesMo.length;
+  const newWidth = `${slideWidth * newSlideCount}%`;
+  const newWidthMo = `${slideWidth * newSlideCountMo}%`;
+  sliderContainer.style.width = newWidth;
+  sliderContainerMo.style.width = newWidthMo;
+};
+
 // slide clone
 const makeClone = () => {
   for (let i = 0; i < slideCount; i++) {
@@ -61,6 +75,7 @@ const makeClone = () => {
     sliderContainerMo.appendChild(cloneSlideMo);
   }
 
+  updateWidth();
   setTimeout(() => {
     sliderContainer.classList.add("animated");
     sliderContainerMo.classList.add("animated");

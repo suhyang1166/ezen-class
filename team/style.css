@@ -29,14 +29,20 @@
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 .slide_pc.animated {
   transition: left 0.3s ease-in;
 }
 .main_img_pc {
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   float: left;
+}
+.main_img_pc img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .slide_mo {
@@ -605,6 +611,9 @@ button.active {
     margin: 0 auto;
   }
   .menu_img {
+    display: none;
+  }
+  .menu_img.active {
     height: 320px;
     display: flex;
     flex-direction: row;
@@ -751,6 +760,7 @@ button.active {
     display: none;
     opacity: 0;
   }
+
   /* news */
   .new_wrap {
     width: 100%;
@@ -819,11 +829,14 @@ button.active {
     transition: left 0.3s ease-in;
   }
   .main_img_mo {
-    position: absolute;
     display: block;
     width: 100%;
     height: 100%;
     float: left;
+  }
+  .main_img_mo img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   .popup_all {
