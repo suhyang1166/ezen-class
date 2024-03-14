@@ -44,6 +44,7 @@ console.log(popupSlideCount);
 // // li style setting
 const popupUpdateWidth = () => {
   const popupSlides = document.querySelectorAll(".m_pop_contents");
+  console.log(popupSlides);
   const newSlideCountPop = popupSlides.length;
   const newWidthPop = `${popupSlideWidth * newSlideCountPop}%`;
   popupSlideContainer.style.width = newWidthPop;
@@ -70,6 +71,8 @@ makePopupClone();
 let popupIdx = 0;
 
 const popupMove = (num) => {
+  // console.log(num);
+  console.log("slide");
   popupWraps.style.left = `${-num * popupSlideWidth}%`;
   popupIdx = num;
   // console.log(num);
@@ -171,7 +174,7 @@ const moveSlide = (num) => {
 const autoSlide = () => {
   timer = setInterval(() => {
     moveSlide(currentIdx + 1);
-    popupMove(currentIdx + 1);
+    // popupMove(currentIdx + 1);
   }, 3000);
 };
 
