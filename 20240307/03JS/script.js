@@ -5,6 +5,7 @@ xhr.send();
 
 const renderHTML = (students) => {
   let output = "";
+  console.log(students);
   students.forEach((student) => {
     output += `<h2>${student.name}</h2>
     <ul>
