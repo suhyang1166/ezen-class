@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Cute Font", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: gray;
+}
+.wrapper_header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title {
+  color: #db4a9a;
+  font: 600 24px/1 "Cute Font", sans-serif;
+}
+.subtitle {
+  font-size: 20px;
+  padding-top: 2px;
+}
+.divideLine {
+  width: 100%;
+  border-top: 1px solid #db4a9a;
+  margin: 4px 0;
+}
+.albumWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.albumWrapper_item .album_thumnail {
+  width: 110px;
+  height: 110px;
+}
+.albumWrapper_item .album_songtitle {
+  font-size: 14px;
+}
+.albumWrapper_item .album_artist {
+  color: #db4a9a;
+  font-weight: bold;
+}
+.wrapper_body {
+  width: 100%;
+}
+.albumTable {
+  width: 100%;
+  padding: 2px;
+  border-spacing: 0;
+}
+.albumTable th {
+  background: #fff6fc;
+  font-weight: bold;
+  /* border-top: 1px solid #db4a9a; */
+  border-bottom: 1px dotted #db4a9a;
+}
+.albumTable td {
+  /* color: #db4a9a; */
+  border-bottom: 1px dashed #db4a9a;
+}
+.albumTable_checkbox {
+  width: 5%;
+  text-align: center;
+}
+.albumTable_checkbox input {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+.albumTable_number {
+  width: 20%;
+  text-align: center;
+}
+.albumTable_song {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding-left: 60px;
+}
+.fas {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  font-size: 7px;
+  border: 1px solid #db4a9a;
+  border-radius: 3px;
+  padding: 1px;
+  text-align: center;
+  color: #db4a9a;
+}
+.albumTable_artist {
+  width: 26%;
+  text-align: center;
+}
+.albumTable_footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.albumTable_footer button {
+  background: #db4a9a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2px;
+  padding: 3px;
+  font-size: 14px;
+  font-family: "Cute Font", sans-serif;
+}
+.albumTable_footer_center {
+  color: #ff0055;
+  margin-top: 5px;
+}

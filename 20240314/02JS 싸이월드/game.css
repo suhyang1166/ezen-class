@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+/* font-family: "Cute Font", sans-serif; */
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Cute Font", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 5px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: gray;
+}
+.wrapper_header {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contents_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title {
+  color: #db4a9a;
+  font: 600 24px/1 "Cute Font", sans-serif;
+}
+.subtitle {
+  font-size: 20px;
+  padding-top: 2px;
+}
+.divideLine {
+  width: 100%;
+  border-top: 1px solid #db4a9a;
+  margin: 4px 0;
+}
+.game_container {
+  border: 3px dotted #db4a9a;
+  border-radius: 15px;
+  padding: 20px 15px;
+  background: #fff6fc;
+  width: 100%;
+  height: 185px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  margin: 5px 0;
+}
+.game_container img {
+  width: 180px;
+  border-radius: 15px;
+}
+.game_container > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.game_title {
+  font: 700 24px/1 "Cute Font", sans-serif;
+}
+.game_subtitle {
+  font-size: 20px;
+}
+.word_text input[type="text"] {
+  width: 150px;
+  border: none;
+  border-bottom: 1px solid #db4a9a;
+  background: transparent;
+  padding: 0 0 2px 4px;
+  font: 400 16px/1 "Cute Font", sans-serif;
+}
+.word_text input[type="text"]:focus {
+  outline: none;
+}
+.word_text input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+.word_text input[type="submit"],
+.wrapper_lotto_btn {
+  padding: 2px 8px;
+  border: none;
+  border-radius: 6px;
+  background: #db4a9a;
+  color: #fff6fc;
+  font: 400 20px/1 "Cute Font", sans-serif;
+}
+.word_result {
+  color: #ff0055;
+  font-size: 24px;
+  font-weight: bold;
+}
+.game_lotto_number {
+  width: 150px;
+  height: 21px;
+  background: #ffe400;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 2px 6px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+.wrapper_lotto_btn {
+  cursor: pointer;
+}
