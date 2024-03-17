@@ -50,6 +50,7 @@
   padding-top: 10px;
   border-top: 1px solid #ff4713;
   opacity: 0.39;
+  cursor: pointer;
   /* font-family: "SF700"; */
 }
 .menu_select .active {
@@ -58,8 +59,10 @@
 
 /* menu-contents */
 .menu_contents {
-  width: 80%;
+  width: 100%;
+  height: 100%;
   max-width: 1200px;
+  margin: 0 auto;
   /* margin-top: 60px; */
 }
 .menu_detail {
