@@ -52,6 +52,7 @@ const getPopularMovies = () => {
   fetch(URL)
     .then((response) => response.json())
     .then(({ results }) => {
+      console.log(results);
       results.forEach((movie) => {
         createBlock(movie);
       });
