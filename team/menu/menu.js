@@ -1,24 +1,33 @@
 // menu click event
-const wrap = document.querySelector("ul");
+const wrap = document.querySelector(".menu_detail > ul");
 const menuBtns = document.querySelectorAll(".menu_select li");
-console.log(menuBtns.target);
 
 const createItem = (items) => {
-  const { category } = items;
-  console.log(items);
-  console.log("click");
-  items.forEach((item) => {
-    const li = document.createElement("li");
-    const menuWrap = document.createElement("a");
-    const menuTitle = document.createElement("h1");
+  // console.log(items.category, menuBtns[0].innerText);
+  const menuItem = document.createElement("li");
+  const menuWrap = document.createElement("a");
+  const span = document.createElement("span");
+  const img = document.createElement("img");
+  const menuTitle = document.createElement("h1");
 
-    menuWrap.className = "menu_img";
-    menuTitle.className = "menu_text";
-    menuTitle.innerText = item.title;
+  menuItem.className = "menu_item";
 
-    li.append(menuWrap, menuTitle);
-    wrap.appendChild(li);
-  });
+  menuWrap.className = "menu_img";
+
+  span.className = "menu_new";
+  span.innerText = items.type;
+
+  img.src = items.img;
+
+  menuTitle.className = "menu_text";
+  menuTitle.innerText = items.title;
+
+  menuWrap.append(span, img);
+  menuItem.append(menuWrap, menuTitle);
+  wrap.appendChild(menuItem);
+  for (let i = 0; i < menuBtns.length; i++) {
+    console.log("click");
+  }
 };
 
 menuBtns.forEach((menuBtn) => {
