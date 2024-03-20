@@ -1,0 +1,106 @@
+@import url(./reset.css);
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: width 0.8s linear;
+}
+.img01::before {
+  background: linear-gradient(140deg, #ffc400, transparent);
+}
+.img02::before {
+  background: linear-gradient(140deg, #ff0055, transparent);
+}
+.img03::before {
+  background: linear-gradient(140deg, #2f00ff, transparent);
+}
+
+@keyframes width {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.img01,
+.img02,
+.img03 {
+  display: none;
+}
+.main.active {
+  display: block;
+}
+.main h1 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font: 100 100px/1 "arial";
+  animation: text 0.5s linear;
+  animation-duration: 1s;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  50% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    top: 25%;
+  }
+}
+
+.main img {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.nav ul li {
+  cursor: pointer;
+}
+.nav ul li.active {
+  color: crimson;
+}

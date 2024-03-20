@@ -1,0 +1,30 @@
+@import url(./reset.css);
+
+.wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+form {
+  display: flex;
+  margin: 30px 0;
+}
+form p {
+  line-height: 40px;
+}
+input {
+  width: 100px;
+  padding: 10px;
+  margin: 0 5px;
+}
+input:focus {
+  outline: none;
+  text-align: center;
+}
+.result {
+  height: 60px;
+  border: 1px solid gray;
+  background: #ddd;
+  line-height: 55px;
+  padding-left: 10px;
+  font-weight: bold;
+}
