@@ -3,7 +3,7 @@ const wrap = document.querySelector(".menu_detail > ul");
 const menuBtns = document.querySelectorAll(".menu_select li");
 
 const createItem = (items) => {
-  // console.log(items.category, menuBtns[0].innerText);
+  console.log(items.id, menuBtns);
   const menuItem = document.createElement("li");
   const menuWrap = document.createElement("a");
   const span = document.createElement("span");
@@ -26,7 +26,9 @@ const createItem = (items) => {
   menuItem.append(menuWrap, menuTitle);
   wrap.appendChild(menuItem);
   for (let i = 0; i < menuBtns.length; i++) {
-    console.log("click");
+    if (items.index === menuBtns[i]) {
+      console.log("ok");
+    }
   }
 };
 
