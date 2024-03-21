@@ -1,5 +1,4 @@
 // menu click event
-
 const wrap = document.querySelector(".menu_detail > ul");
 const menuBtns = document.querySelectorAll(".menu_select li");
 
@@ -19,7 +18,6 @@ const createItem = (items, index) => {
     const menuTitle = document.createElement("h1");
 
     menuItem.className = "menu_item";
-
     menuWrap.className = "menu_img";
 
     span.className = "menu_new";
@@ -36,9 +34,8 @@ const createItem = (items, index) => {
 
     // 상세페이지 이동
     img.addEventListener("click", () => {
-      window.open(
-        `https://www.selecto.co.kr/brand/menu_detail.asp?menuidx=${items.menuidx}&page=${items.page}&slideInx=${items.slideInx}&kind=${items.category}`
-      );
+      const url = `https://www.selecto.co.kr/brand/menu_detail.asp?menuidx=${items.menuidx}&page=${items.page}&slideInx=${items.slideInx}&kind=${items.category}`;
+      window.open(url);
     });
 
     if (items.type === null) {
