@@ -1,0 +1,39 @@
+@import url(./reset.css);
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(./images/01.png) center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+#container {
+  width: 800px;
+  margin: 50px auto;
+}
+form {
+  display: flex;
+  margin: 30px 0;
+}
+form p {
+  line-height: 40px;
+}
+input {
+  width: 100px;
+  padding: 10px;
+  margin: 0 5px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+  text-align: center;
+}
+#result {
+  height: 60px;
+  border: 1px solid gray;
+  background: #ddd;
+  line-height: 55px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #000;
+}

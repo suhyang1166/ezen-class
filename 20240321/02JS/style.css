@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url(./reset.css);
+
+:root {
+  --yellow-color: #ffd700;
+  --red-color: #dc143c;
+  --blue-color: #4169e1;
+}
+
+body {
+  font-family: "Black Han Sans", sans-serif;
+  color: #fff;
+}
+
+.tabs {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.items {
+  width: 300%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.items div {
+  width: 33.33%;
+  height: 100vh;
+  float: left;
+  position: relative;
+}
+.items div:nth-child(1) {
+  background: url(./images/01.png) center/cover no-repeat;
+}
+.items div:nth-child(2) {
+  background: url(./images/02.jpg) center/cover no-repeat;
+}
+.items div:nth-child(3) {
+  background: url(./images/03.jpg) center/cover no-repeat;
+}
+.items div:nth-child(1)::before,
+.items div:nth-child(2)::before,
+.items div:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff, transparent, #fff);
+}
+.items div h1 {
+  position: relative;
+  font-size: 120px;
+  text-align: center;
+  text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6);
+  letter-spacing: 80px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+.items div h1.active {
+  transform: translateY(50%);
+  opacity: 1;
+}
+
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.btn label {
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.btn label.active {
+  text-shadow: 0 0 12px aqua;
+}
